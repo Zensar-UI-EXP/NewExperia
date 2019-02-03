@@ -1,0 +1,206 @@
+@import 'variables.scss';
+.contactdetails{
+    &__innercont{
+        width: 100%;
+        clear: both;
+        padding:0;
+    }
+    &__headerContainer{
+        height: auto;
+        overflow: hidden;
+    }
+	&__headertext{
+        float: left;
+        @include fontWeight($weight: 300);
+        @include fontStyling($family: 'Roboto-Medium', $size: 20px, $color: $blackColor);
+    }
+    &__btn{
+        padding: 0;
+        float: right;
+        width: 134px;
+        height: 34px;
+        background-color: $btnBackground;
+        border: solid 1px rgba(0, 69, 144, 0.3);
+        @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blueFontColor);
+    }
+    &__accordian{
+        height: 427px;
+        border-radius: 6px;
+        border: solid 1px $lightGreyColor;
+        clear: both;
+        padding: 10px 35px;
+        margin-top: 50px;
+    }
+    &__addresstext{
+        text-transform: uppercase;
+        @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blackColor);
+        @include fontWeight($weight: 500);
+        padding-left: 19px;
+        display: inline-block;
+    }
+    &__select--right{
+        float: right;
+    }
+    &__list--text{
+        text-decoration: none;
+    }
+    &__addressheader{
+        padding: 12px 12px 12px 12px;
+        border-bottom: 1px solid $lightGreyColor;
+        background-color: $whiteLightColor;
+        border-radius: 6px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    &__accordianlink{
+        text-decoration: none;
+    }
+    &__edit{
+        float: right;
+        border-style: none;
+        background-color: $whiteLightColor;
+    }
+    &__edittext{
+        @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blueFontColor);
+        @include fontWeight($weight: 500);
+        svg{
+            vertical-align: bottom;
+            fill: $blueFontColor;
+        }
+    }
+    &__headtext{
+        text-transform: uppercase;
+        color: $tab-heading-color;
+        font-size: 14px;
+        @include fontWeight($weight: 500);
+    }
+    &__eds-accordion-caret.contactdetails__accordian--rotate{
+        transform: rotate(0deg);
+    }
+    &__headertext--padding{
+        padding-left: 26px;
+    }
+    &__closedaccordian{
+        border: 1px solid $lightGreyColor;
+        border-bottom: none;
+        border-radius: 0 0 6px 6px;
+        margin-top: -25px;
+        margin-bottom: 45px;
+    }
+    &__list--display{
+        vertical-align: sub;
+        a{
+            position: relative;
+            vertical-align: sub;
+            .contactdetails__eds-accordion-caret{
+                top:8px;
+            }
+        }
+    }
+    &__eds-accordion-caret{
+        transform: rotate(180deg);
+        top: 20px;
+        position: absolute;
+        margin-top: -3px;
+    width: 12px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSI3cHgiIHZpZXdCb3g9IjAgMCAxMiA3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0OC4yICg0NzMyNykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+R3JvdXAgMjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTIzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi4wMDAwMDAsIDEuMDAwMDAwKSByb3RhdGUoLTQ1LjAwMDAwMCkgdHJhbnNsYXRlKC02LjAwMDAwMCwgLTEuMDAwMDAwKSB0cmFuc2xhdGUoMi4wMDAwMDAsIC0zLjAwMDAwMCkiIGZpbGw9IiMwRTZFQjciPgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTIiIHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjgiIHJ4PSIxIj48L3JlY3Q+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtMi1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0LjAwMDAwMCwgNy4wMDAwMDApIHJvdGF0ZSg5MC4wMDAwMDApIHRyYW5zbGF0ZSgtNC4wMDAwMDAsIC03LjAwMDAwMCkgIiB4PSIzIiB5PSIzIiB3aWR0aD0iMiIgaGVpZ2h0PSI4IiByeD0iMSI+PC9yZWN0PgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+    }
+    &__select--right{
+        margin-top:0 !important;
+    }
+    &__list--display{
+        display: inline;
+    }
+    &__innereds{
+        padding: 20px 38px;
+    }
+    &__width{
+        height: 43px;
+        width: 100%;
+        margin: auto;
+        border-bottom: 1px solid $lightGreyColor;
+        padding: 0 0 10px 0;
+    }
+    &__validity--padding15{
+        padding-left: 15px;
+    }
+    &__hr{  
+        width: 100%;
+        margin: auto;
+        color: $lightGreyColor;
+        margin: 28px 0;
+        border: 0.5px solid;
+    }
+    &__addressdetails{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__homeaddress{
+        @include addresses($width: 47.5%, $borderradius: 6px, $border: solid 1px $lightGreyColor);
+        height: 50%;
+    }
+    &__workaddress{
+        @include addresses($width: 47.5%, $borderradius: 6px, $border: solid 1px $lightGreyColor);
+        
+    }
+    &__addressheader--topborder{
+        border-top: 1px solid $lightGreyColor;
+    }
+    &__validity--padding{
+        padding: 0 0 15px 15px;
+    }
+    &__address{
+        padding: 20px 15px 15px;
+        @include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $blackColor);
+    }
+    &__address--padding0{
+        padding-bottom: 0px;
+    }
+    &__validity{
+        @include fontStyling($family: 'Roboto-Medium', $size: 13px, $color: $brownGreyColor);
+        @include fontWeight($weight: 500);
+    }
+    &__validity--font{
+        @include fontStyling($family: 'Roboto-Regular', $size: 13px, $color: $brownGreyColor);
+        
+    }
+    &__addressheader--displayinline{
+        display: inline-block;
+    }
+}
+[label="Profile"]{
+    .all-users-dd, .form-switch{
+        display: none;
+    }
+    .sort-filter > div{
+        &:first-child{
+            margin-left: 15px;
+        }
+        flex: none;
+    }
+    .sort-by-container{
+        margin-left: 30px;
+    }
+    eds-accordion{
+        display: none;
+    &.data, &.contact-details-card, &.note-container{
+        display: block;
+    }
+    }
+}
+eds-dropdown .eds-dropdown-trigger{
+	background: url(../images/dropdown.PNG) no-repeat 160px; 
+    background-size: 18px 22px;
+}
+select::-ms-expand {
+    display: none;
+}
+select {
+    -moz-appearance: none;
+    text-overflow: '';
+}

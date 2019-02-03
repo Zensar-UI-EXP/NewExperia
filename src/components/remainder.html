@@ -1,0 +1,199 @@
+<section tabindex="-1" aria-hidden="true">
+    <div class="sort-filter marginBtm30">
+        <div>
+            <label for="">Filter by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All events</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+
+            </eds-dropdown>
+        </div>
+        <div class="all-users-dd">
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">All users</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div class="sort-by-container">
+            <label for="eds-dropdownselect">Sort by</label>
+            <eds-dropdown class="eds"><label class="style-scope eds-dropdown"></label>
+                <div id="eds-dropdownselect" class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                    <span class="eds-dropdown-value style-scope eds-dropdown">Newest first</span>
+                    <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                    <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                </div>
+            </eds-dropdown>
+        </div>
+        <div>
+            <label class="form-switch">Expand all
+                <input type="checkbox">
+                <i></i> </label>
+        </div>
+    </div>
+
+</section>
+<pcc-eds-timeline-view class="eds" tabindex="-1" aria-hidden="true">
+    <div class="timeline-wrapper style-scope pcc-eds-timeline-view user-call-flow">
+        <div slot="timeline">
+            <pcc-eds-timeline-item icon="phone_callback" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">TODAY</div>
+                            <div>21/03/2018</div>
+                            <div>09:42</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Last Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="phone_missed" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">YESTERDAY</div>
+                            <div>20/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">SMS Reminder Sent to Customer</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">2 days ago</div>
+                            <div>19/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Outband Call</div>
+                                <div slot="slot-header-right">
+                                    <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                            class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                            style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                    David Jones
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 week ago</div>
+                            <div>12/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="phone_forwarded" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">phone_forwarded</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Outband Call</div>
+                                <div slot="slot-header-right">
+                                    <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                            class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                            style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                    David Jones
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 week ago</div>
+                            <div>10/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Letter Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item icon="mail_outline" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div style="color:#7a7a7a">1 month ago</div>
+                            <div>10/03/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item" icon="help_outline" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon" style="transform: scale(1.35);">help_outline</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                Letter Reminder Sent to Customer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+        </div>
+    </div>
+</pcc-eds-timeline-view>

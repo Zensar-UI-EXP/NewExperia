@@ -1,0 +1,91 @@
+<eds-tabs background="gray" class="eds" role="complementary">
+    <ul class="tab-labels style-scope eds-tabs" role="tablist">
+        <li role="presentation" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" id="tab-activities" aria-selected="true" role="tab" class="style-scope eds-tabs">
+                Activities
+            </a>
+        </li>
+    </ul>
+    <ul class="style-scope eds-tabs activity-tabs">
+        <li role="presentation" class="style-scope eds-tabs promisepay__link">
+            <a aria-selected="false" aria-controls="tab-panel-3" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
+                Escalate to Manager
+            </a>
+        </li>
+        <li onclick="toggleMemo()" role="presentation" class="style-scope eds-tabs memo-tab bor-top--1 memodetail">
+            <a aria-expanded="false" aria-controls="expandable" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
+            <ul id="expandable">
+                <li>
+                    <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                        Standard Memo
+                    </a>
+                </li>
+                <li>
+                    <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                        Important Memo
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="style-scope eds-tabs">
+            <a aria-controls="Move to Arrangement"
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Move to Arrangement</a>
+        </li>
+        <li role="presentation" class="style-scope eds-tabs">
+                <a aria-controls="Product Request"
+                    aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Product Request <span class="eds-accordion-caret"></span></a>
+            </li>
+        <li role="presentation" class="style-scope eds-tabs">
+            <a  aria-controls="Referral" aria-selected="false"
+                href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Referral</a>
+        </li>
+        <li role="presentation" class="style-scope eds-tabs">
+            <a  aria-controls="Report Account Exceptions"
+                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Report Account
+                Exceptions <span class="eds-accordion-caret"></span></a>
+        </li>
+    </ul>
+    <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
+        <p>
+            <eds-alert motif="error" background="white" class="eds">
+                <div class="eds-alert-sidebar style-scope eds-alert"></div>
+                <div class="eds-alert-close-icon style-scope eds-alert">×</div>
+                <div class="eds-alert-content style-scope eds-alert">
+                    This is an example of an alert note
+                </div>
+            </eds-alert>
+        </p>
+    </eds-tab>
+    <eds-tab label="Activities" class="eds" role="tabpanel">
+        <p>
+            Activities content...
+        </p>
+    </eds-tab>
+</eds-tabs>
+
+<section class="notes-tab" role="contentinfo">
+    <eds-accordion class="greyHeading eds marginBtm20 note-container" background="white" role="tablist" tabindex="0">
+        <eds-accordion-panel label="Notes" role="tab">
+            <h5 id="notesHeading" class="eds-accordion-label cur--auto">
+                <span class="notes-icon">
+                    <img src="../assets/images/Notes-Icon.png" alt="Notes">
+                </span>
+                <span class="eds-accordion-label-text text-Cap"> Notes </span>
+                <span class="eds-accordion-label-text text-Cap"> Notes </span>
+                <!-- <span class="eds-accordion-caret"></span> -->
+            </h5>
+            <label for="notes__text" class="search__visuallyhidden textNote">Enter text in notes</label>
+            <textarea class="scroll" name="" id="notes__text" cols="30" rows="19"></textarea>
+        </eds-accordion-panel>
+        <div class="table">
+            <div class="row">
+                <div aria-label="Last saved 02:05 pm" class="cell pad-top--8">
+                    Last saved 02:05 pm
+                </div>
+                <div class="cell">
+                    <button aria-label="Save Note" tabindex="0" aria-label="Click to save note" class="note-btn">Save Note</button>
+                </div>
+            </div>
+        </div>
+    </eds-accordion>
+</section>

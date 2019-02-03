@@ -1,0 +1,21 @@
+<section class="container acct-container clear">
+    ${require('./pccSecondaryHeader.html')}
+    <eds-tabs class="eds" id="account__main">
+        ${require('./edsTabs.html')}
+        <eds-tab label="Person Overview" class="eds accountsTabPanel" id="tab-panel-0" aria-labelledby="tab-0" aria-hidden="false"
+            role="tabpanel" active="true">
+            ${require('./personOverview.html')}
+        </eds-tab>
+        <eds-tab aria-label="A One Zero Zero Zero Zero Five Six case" aria-expanded="false" label="A1000056" class="eds accountsTabPanel" aria-hidden="false" id="tab-panel-1" aria-labelledby="tab-1" role="tabpanel">
+                ${require('./accountInfo.html')}
+        </eds-tab>
+        <eds-tab label="Income & Expenditure" class="eds accountsTabPanel" id="tab-panel-2" aria-labelledby="tab-2" aria-hidden="false"
+            role="tabpanel" active="true">
+            ${require('./incomeExpenditure.html')}
+        </eds-tab>
+        <eds-tab aria-expanded="true" label="Arrangement" class="eds accountsTabPanel" aria-hidden="false" tabindex="-1" id="tab-panel-3"
+            aria-labelledby="tab-3" role="tabpanel">
+            ${require('./arrangement.html')}
+        </eds-tab>
+    </eds-tabs>
+</section>

@@ -1,0 +1,261 @@
+@import './variables.scss'; 
+
+$font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/*
+ * These variables are available to all components globally and are thus designated with an "eds-" prefix.
+ * Components may implement these and pass-through to a local variable name.
+ */
+/*
+ * These variables are available to all components globally and are thus designated with an "eds-" prefix.
+ * Components may implement these and pass-through to a local variable name.
+ */
+eds-dropdown {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	vertical-align: bottom;
+	.slotted {
+		display: none;
+	}
+	>label {
+		display: none;
+		font-family: $font_family_1;
+		font-size: 16px;
+		font-weight: 400;
+		color: $font-primary-color;
+		font-size: 0.88rem;
+		font-weight: 500;
+		line-height: 1rem;
+		margin-bottom: 10px;
+	}
+	>label.show {
+		display: block;
+	}
+	.eds-dropdown-trigger {
+		position: relative;
+		display: block;
+		background-color: $whiteColor;
+		width: 100%;
+		box-sizing: border-box;
+		font-family: $font_family_1;
+		font-size: 16px;
+		font-weight: 400;
+		color: $font-primary-color;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		padding: 5px 10px;
+		line-height: 1.4rem;
+		min-height: 34px;
+		border: 1px solid #939393;
+		border-radius: 4px;
+		transition: border-color 0.15s ease;
+		outline: none;
+		.eds-dropdown-placeholder {
+			display: none;
+			color: $eds-dropdown-placeholder-color;
+			font-weight: 400;
+		}
+		.eds-dropdown-placeholder.show {
+			display: block;
+		}
+		.eds-dropdown-arrow {
+			position: absolute;
+			bottom: 14px;
+			right: 10px;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $btn-color;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			border-radius: 4px;
+			border: 2px solid $btn-color;
+			opacity: 0;
+			transition: opacity 0.15s ease;
+		}
+		&:focus {
+			outline: -webkit-focus-ring-color auto 5px;
+			&::after {
+				opacity: 1;
+				transition: opacity 0.15s ease;
+			}
+		}
+	}
+	.eds-dropdown-trigger.focus {
+		&::after {
+			opacity: 1;
+			transition: opacity 0.15s ease;
+		}
+	}
+	.eds-dropdown-options {
+		display: none;
+		opacity: 0;
+		position: absolute;
+		z-index: 1000;
+		top: calc(100% + 8px);
+		width: 100%;
+		background-color: $whiteColor;
+		border-radius: 4px;
+		border: 1px solid transparent;
+		border: 1px solid #d8d8d8;
+		background-clip: border-box;
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+		background-clip: padding-box;
+		font-weight: 400;
+		transition: border-color 0.15s ease, opacity 0.15s ease;
+		.eds-dropdown-searchbox {
+			display: none;
+			position: relative;
+			border-bottom: 1px solid #d8d8d8;
+			padding: 5px;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;
+				border-radius: 4px;
+				border: 2px solid $btn-color;
+				opacity: 0;
+				transition: opacity 0.15s ease;
+			}
+			&:focus {
+				&::after {
+					opacity: 1;
+					transition: opacity 0.15s ease;
+				}
+			}
+			.eds-search-icon {
+				position: absolute;
+				top: 10px;
+				right: 12px;
+				width: 20px;
+				height: 20px;
+				svg {
+					fill: $btn-color;
+					width: 20px;
+				}
+			}
+			input {
+				outline: none;
+				display: block;
+				width: 100%;
+				padding: 5px 10px;
+				border: none;
+				line-height: 1.4rem;
+				font-family: $font_family_1;
+				font-size: 16px;
+				font-weight: 400;
+				color: $font-primary-color;
+				box-sizing: border-box;
+			}
+		}
+		.eds-dropdown-searchbox.focus {
+			&::after {
+				opacity: 1;
+				transition: opacity 0.15s ease;
+			}
+		}
+		.eds-dropdown-searchbox.show {
+			display: block;
+		}
+		ul {
+			padding: 5px 0;
+			margin: 2px 0 0;
+			list-style: none;
+			max-height: 280px;
+			overflow: auto;
+			li {
+				margin: 0;
+				padding: 10px 20px;
+				white-space: nowrap;
+				cursor: pointer;
+				min-height: 40px;
+				box-sizing: border-box;
+				position: relative;
+				outline: none;
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					border-radius: 0;
+					border: 2px solid $btn-color;
+					opacity: 0;
+					transition: opacity 0.15s ease;
+				}
+				&:focus {
+					&::after {
+						opacity: 1;
+						transition: opacity 0.15s ease;
+					}
+				}
+				&:hover {
+					background-color: $btn-color;
+					color: $whiteColor;
+				}
+				eds-checkbox {
+					position: absolute;
+					top: 12px;
+					left: 20px;
+				}
+			}
+			li.focus {
+				&::after {
+					opacity: 1;
+					transition: opacity 0.15s ease;
+				}
+			}
+			li.eds-checkbox-option {
+				padding-left: 48px;
+			}
+		}
+	}
+}
+eds-dropdown.eds-dropdown-open {
+	.eds-dropdown-options {
+		display: block;
+		opacity: 1;
+	}
+}
+eds-dropdown[disabled] {
+	cursor: not-allowed;
+	.eds-dropdown-trigger {
+		border-color: $lightGreyColor;
+		color: $brownGreyColor;
+		&:focus {
+			border-color: $lightGreyColor;
+			color: $brownGreyColor;
+			&::after {
+				opacity: 0;
+			}
+			.eds-dropdown-arrow {
+				border-top-color: $lightGreyColor;
+			}
+		}
+		&::after {
+			opacity: 0;
+		}
+		.eds-dropdown-arrow {
+			border-top-color: $lightGreyColor;
+		}
+	}
+}
+.acct-container{
+	eds-dropdown{
+		min-width: 181px;
+	}
+}

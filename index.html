@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+    <meta charset=utf-8> 
+    <title>Collections - Search Cases - Experain</title> 
+    <meta name=description content=Experain /> 
+    <meta name=viewport content="width=device-width,initial-scale=1"> 
+    <link rel="shortcut icon" href=../src/assets/images/favicon.ico type=image/x-icon> 
+</head>
+<body class="eds eds-show-body">
+    <div class="container">
+        <a tabindex="1" href="#dashboard__main" class="skiplink">Skip to main content</a>
+        ${require('./src/components/header.html')}
+        ${require('./src/components/secondaryHeader.html')}
+        <main id="dashboard__main">
+            ${require('./src/components/search.html')} 
+            ${require('./src/components/caseTableList.html')}
+        </main>
+    </div>
+    <script src=build/bundle.js></script>
+</body> 
+</html>

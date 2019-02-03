@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+eds-tag {
+	display: inline-block;
+	padding: 4px 10px;
+	font-size: 14px;
+	border-radius: 12px;
+	margin-left: 2px;
+	line-height: 1 !important;
+	&:not([motif]) {
+		background: $eds-tag-color;
+		color: $font-primary-color;
+	}
+}
+eds-tag[motif="default"] {
+	background: $eds-tag-color;
+	color: $font-primary-color;
+}
+eds-tag[motif='error'] {
+	background: $eds-error;
+	color: $alert-color;
+}
+eds-tag[motif='warning'] {
+	background: $eds-warning;
+	color: $warning-color;
+}
+eds-tag[motif='success'] {
+	background: $eds-success;
+	color: $success-color;
+	font-weight: normal;
+	text-transform: capitalize;
+}

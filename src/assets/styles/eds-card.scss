@@ -1,0 +1,96 @@
+@import "../styles/variables.scss";
+
+/*
+ * These variables are available to all components globally and are thus designated with an "eds-" prefix.
+ * Components may implement these and pass-through to a local variable name.
+ */
+/*
+ * These variables are available to all components globally and are thus designated with an "eds-" prefix.
+ * Components may implement these and pass-through to a local variable name.
+ */
+eds-card {
+	display: block;
+	padding: 20px;
+	margin: 20px 0;
+	border: 1px solid #d8d8d8;
+	border-radius: 6px;
+	background-color: $whiteColor;
+	>h1 {
+		margin-top: 0;
+	}
+	>h2 {
+		margin-top: 0;
+	}
+	>h3 {
+		margin-top: 0;
+	}
+	>h4 {
+		margin-top: 0;
+	}
+	>h5 {
+		margin-top: 0;
+	}
+	>h6 {
+		margin-top: 0;
+	}
+	p {
+		margin-top: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	header {
+		margin: -20px -20px 20px;
+		padding: 12px 20px;
+		border-bottom: 1px solid #d8d8d8;
+		>h1 {
+			margin: 0;
+		}
+		>h2 {
+			margin: 0;
+		}
+		>h3 {
+			margin: 0;
+		}
+		>h4 {
+			margin: 0;
+		}
+		>h5 {
+			margin: 0;
+		}
+		>h6 {
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
+	}
+	header.flush {
+		padding: 0;
+		eds-toolbar {
+			border-bottom: 0;
+		}
+	}
+	main {
+		line-height: 1.4rem;
+	}
+	footer {
+		margin: 20px -20px -20px;
+		padding: 15px 20px;
+		border-top: 1px solid #d8d8d8;
+		p {
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	footer.flush {
+		padding: 0;
+		eds-toolbar {
+			border-bottom: 0;
+		}
+	}
+}
+eds-card[background='gray'] {
+	background-color: $whiteLightColor;
+}

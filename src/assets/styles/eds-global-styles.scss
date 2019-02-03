@@ -1,0 +1,252 @@
+@import './variables.scss';
+$font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+body.eds {
+	display: none;
+	font-family: $font_family_1;
+	font-size: 16px;
+	font-weight: 400;
+	color: $font-primary-color;
+	* {
+		box-sizing: border-box;
+		&::before {
+			box-sizing: border-box;
+		}
+		&::after {
+			box-sizing: border-box;
+		}
+	}
+}
+body.eds.eds-show-body {
+	display: block;
+}
+.eds {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $font_family_1;
+	line-height: 1.4em;
+	a {
+		color: $btn-color;
+		&:hover {
+			color: $eds-tab-hover-color;
+		}
+	}
+	h1 {
+		color: $font-primary-color;
+		font-weight: 300;
+		line-height: 1.4em;
+		font-size: 30px;
+	}
+	h2 {
+		color: $font-primary-color;
+		font-weight: 300;
+		line-height: 1.4em;
+		font-size: 24px;
+	}
+	h3 {
+		color: $font-primary-color;
+		font-weight: bold;
+		font-size: 18px;
+	}
+	h4 {
+		color: $font-primary-color;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	h5 {
+		color: $font-primary-color;
+		font-weight: bold;
+	}
+	h1[caps] {
+		text-transform: uppercase;
+		color: $tab-heading-color;
+		font-weight: 400;
+		font-size: 28px;
+	}
+	h2[caps] {
+		text-transform: uppercase;
+		color: $tab-heading-color;
+		font-weight: 400;
+		font-size: 22px;
+	}
+	h3[caps] {
+		text-transform: uppercase;
+		color: $tab-heading-color;
+		font-weight: 400;
+		font-size: 16px;
+	}
+	h4[caps] {
+		text-transform: uppercase;
+		color: $tab-heading-color;
+		font-weight: 400;
+		font-size: 14px;
+	}
+	h5[caps] {
+		text-transform: uppercase;
+		color: $tab-heading-color;
+		font-weight: 400;
+		font-size: 12px;
+	}
+	hr {
+		border: none;
+		border-top: 1px solid #d8d8d8;
+		height: 1px;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+}
+[background='gray'] {
+	background-color: $whiteLightColor;
+}
+.no-scroll {
+	overflow: hidden;
+}
+eds-icon[spin] {
+	animation: eds-spin 2s infinite linear;
+}
+eds-icon {
+	display: inline-block;
+	line-height: 0 !important;
+	margin: 0 6px 0 0;
+	vertical-align: text-bottom;
+	.material-icons {
+		font-size: inherit;
+	}
+	>* {
+		font-size: inherit;
+	}
+}
+eds-icon.s18 {
+	>* {
+		font-size: 18px;
+		vertical-align: bottom;
+	}
+}
+eds-icon.s24 {
+	>* {
+		font-size: 24px;
+		vertical-align: bottom;
+	}
+}
+eds-icon.s36 {
+	>* {
+		font-size: 36px;
+		vertical-align: bottom;
+	}
+}
+eds-icon.s48 {
+	>* {
+		font-size: 48px;
+		vertical-align: bottom;
+	}
+}
+eds-icon.s60 {
+	>* {
+		font-size: 60px;
+		vertical-align: bottom;
+	}
+}
+eds-icon[border] {
+	padding: 0.8rem;
+	border: 4px solid #d8d8d8;
+	border-radius: 3px;
+}
+.header-container {
+	height: 50px;
+	background: #e6e6e6;
+	display: flex;
+	align-items: center;
+	position: relative;
+	.icon-container {
+		background-color: $whiteLightColor;
+		line-height: 0;
+		.home-icon {
+			background-color: $transparent-color;
+			padding: 17px 23px;
+			margin: 0;
+			color: $btn-color;
+			cursor: pointer;
+			&:hover {
+				color: $icon-hover-color;
+			}
+		}
+		.home-icon.selected {
+			background-color: $whiteColor;
+			color: $font-primary-color;
+		}
+	}
+	.tabs-container {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 100%;
+		max-height: 100%;
+		overflow: hidden;
+	}
+}
+pcc-eds-secondary-header-tab {
+	background-color: $whiteLightColor;
+	border-left: 1px solid #cccccc;
+	display: flex;
+	align-content: space-between;
+	align-items: center;
+	width: 380px;
+	height: 50px;
+	&:last-child {
+		border-right: 1px solid #cccccc;
+	}
+	.info-container {
+		height: 100%;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		color: $btn-color;
+		eds-icon {
+			margin: 0;
+		}
+		[icon='person'] {
+			padding: 0 10px 0 20px;
+		}
+		.person-name {
+			min-width: 172px;
+			font-size: 12px;
+			font-weight: bold;
+			max-height: 100%;
+			line-height: 1.4;
+		}
+	}
+	.tab-controls {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		.close-button {
+			margin: 0 10px 0 5px;
+			padding: 8px;
+			cursor: default;
+			color: $btn-color;
+		}
+	}
+}
+pcc-eds-secondary-header-tab[active] {
+	background-color: $whiteColor;
+	.info-container {
+		color: $font-primary-color;
+	}
+}
+@keyframes "eds-spin" {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

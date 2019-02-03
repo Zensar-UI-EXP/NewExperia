@@ -1,0 +1,265 @@
+
+@import 'variables.scss';
+// Global CSS here
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, ol li, ul li {
+	list-style: none;
+}
+@media all and (-ms-high-contrast:none)
+     {
+		ol, ul, ol li, ul li {
+			list-style: none;
+			list-style-image: url(data:0);
+		}
+     }
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}                                                                   
+body{
+    font-family: 'Roboto';
+}
+.container{
+    width: 1680px;
+    margin: auto;
+}
+.dis-flex{
+    display: flex;
+}
+.clear{
+	clear: both;
+	float: none;
+}
+.btn{
+	width: 120px;
+	padding: 10px 0;
+	border-radius: 4px;
+	background-color: $btn-color;
+	border: solid 1px $btnBorder;
+	@include fontStyling($family: 'Roboto-Medium', $size: 14px, $color: $whiteColor);
+  	text-align: center;
+	cursor: pointer;
+	&--ok{
+		width: 45px!important;
+		margin-right: 5px;
+	}
+	&--cancel{
+		background: $whiteLightColor;
+		border: solid 1px $lightGreyColor;
+		color: $font-primary-color;
+		width: 80px;
+	}
+	&--viewall{
+		float: right;
+	    background: #f6f6f6;
+	    color: $blueFontColor;
+	    border: solid 1px rgba(0, 69, 144, 0.3);
+		cursor: auto;
+	}
+}
+.bor{
+	&-left{
+		&--none{
+			border-left: none!important;
+		}
+	}
+	&-top{
+		&--1{
+			border-top: 1px solid $activity-tab-color;
+		}
+	}
+	&-botrad{
+		&--ltrt{
+			border-radius: 0px 0px 6px 6px!important;
+		}
+	}
+}
+.mar{
+	&-top{
+		&--none{
+			margin-top: 0!important;
+		}
+		&--7{
+			margin-top: 7px!important;
+		}
+		&--5{
+			margin-top: 5px!important;
+		}
+	}
+	&-bot{
+		&--none{
+			margin-bottom: 0!important;
+		}
+	}
+	&-right{
+		&--none{
+			margin-right: 0!important;
+		}
+	}
+	&-tpbt{
+		&--20{
+			margin: 20px 0;
+		}
+	}
+	&-left{
+		&--3{
+			margin-left: 3px!important;
+		}
+	}
+}
+.txt{
+	&-aln{
+		&--right{
+			text-align: right!important;
+		}
+	}
+	&-ind{
+		&--hide{
+			text-indent: -99999em;
+		}
+	}
+}
+.pad{
+	&-top{
+		&--10{
+			padding-top: 10px!important;
+		}
+		&--7{
+			padding-top: 7px!important;
+		}
+		&--8{
+			padding-top: 8px!important;
+		}
+	}
+}
+.cur{
+	&--auto{
+		cursor: default!important;
+	}
+	&--pointer{
+		cursor: pointer!important;
+	}
+}
+.scroll {
+    overflow-y: scroll;
+}
+.scroll::-webkit-scrollbar {
+	width: 17.9px;
+}
+.scroll::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 2px $eds-accordian-label-bg; 
+}
+.scroll::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 2px $eds-accordian-label-bg; 
+	background: $eds-accordian-label-bg;
+	border: 4px solid transparent;
+	border-radius: 10px;
+	background-clip: content-box;
+}
+.ver{
+	&-aln{
+		&--mdl{
+			vertical-align: middle!important;
+		}
+		&--txtop{
+			vertical-align: text-top!important;
+		}
+	}
+}
+.skiplink {
+    position: absolute;
+	left: -9999em;
+	&:focus{
+		left: 0;
+	}
+}
+.focus {
+	outline: -webkit-focus-ring-color auto 5px;
+}
+/**** IE 9+ styles*****/
+:root .btn--viewall { 
+	padding: 0\0!important;
+	margin-top: -2px\0;
+}
+:root .contactdetails__list--display a .contactdetails__eds-accordion-caret {
+    top: 12px\0;
+}
+:root .containerMiddle{
+	margin: 0 25px\0;
+}
+:root eds-card header{
+	margin-bottom: 0\0;
+	padding-bottom: 0\0;
+}
+:root .table.tabledata{
+	padding: 0\0;
+}
+:root .acct-container .containerMiddle > eds-card{
+	padding-bottom: 0\0;
+}
+:root #accountsActivity eds-tabs :first-child.tab-labels li{
+	margin-top: -2px\0;
+}
+:root #accountsActivity eds-tabs :first-child.tab-labels li a{
+	padding-top: 0\0;
+}
+:root #accountsActivity{
+	padding-top: 0\0;
+}
+:root #promise__actsection eds-tabs :first-child.tab-labels li{
+	margin-top: -2px\0;
+}
+:root #promise__actsection eds-tabs :first-child.tab-labels li a{
+	padding-top: 0\0;
+}
+:root #promise__actsection{
+	padding-top: 0\0;
+}
+:root .promisepay__navtab{
+	margin-top: 20px\0;
+}
+:root eds-accordion eds-accordion-panel .eds-accordion-label span{
+
+}
+:root .container{
+	overflow: hidden\0;
+}
+:root .acct-container{
+	height: 1250px\0;
+}

@@ -1,0 +1,112 @@
+$eds-accordian-label-bg: #dcdcdc;
+$btn-color: #426da9;
+$blackColor: #000000;
+$activity-tab-color: #d8d8d8;
+$whiteColor: #ffffff;
+$font-primary-color: #333333;
+$tab-heading-color: #6d2077;
+$eds-dropdown-placeholder-color: #b9b9b9;
+$brownGreyColor: #888888;
+$lightGreyColor: #cccccc;
+$whiteLightColor: #f6f6f6;
+$blueFontColor: #0e6eb7;
+$filter-bgcolor: #d2e8f9;
+$eds-tab-hover-color: #163c6f;
+$icon-hover-color: #1d4f91;
+$transparent-color: transparent;
+$statsColor: #4e4e4e;
+$statsDescColor: #7a7a7a;
+$countColor: #e20000;
+$blueColor: #006dbd;
+$barneyColor: #af1685;
+$lightFontColor: #aaaaaa;
+$btnBorder: #004590;
+$btnBackground: #EDF4FA;
+$navTabBgColor: #d82b80;
+$gradientLeftColor: #ba2f7d;
+$gradientRightColor: #26478d;
+$font_family_1: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-border-color: #e63888;
+$success-color: #007A3B;
+$alert-color: #e4002b;
+$warning-color: #b35900;
+$eds-tag-color: #e6e6e6;
+$eds-error: #ffdce2;
+$eds-warning: #fceeba;
+$eds-success: #cdf4d2;
+$promise-pay-activity-tab: #912783;
+
+//mixins
+@mixin padding-mixin($number) {
+    padding: $number;
+  }
+  
+  @mixin fontWeight($weight) {
+    font-weight: $weight;
+   }
+   @mixin addresses($width, $borderradius, $border){
+     width: $width;
+     border-radius: $borderradius;
+     border: $border;
+   }
+   @mixin fontStyling($family, $size, $color) {
+    font-size: $size;
+  font-family: $family !important;
+  font-weight: normal !important;
+  color: $color;
+  }
+@mixin headerIcons($width, $height){
+width: $width;
+height: $height;
+float: left;
+}
+@mixin coverImage($imgurl){
+  background: url($imgurl) no-repeat center center transparent; 
+  background-size: 100%;
+}
+.mar{
+  &-tp{
+    &--0{
+      margin-top: 0!important;
+    }
+  }
+}
+.wdh{
+  &-per{
+    &--10{
+      width: 10%!important;
+    }
+    &--25{
+      width: 25%!important;
+    }
+    &--35{
+      width: 35%!important;
+    }
+  }
+}
+.bor{
+  &-tp{
+    &--{
+      &none{
+        border-top: none!important;
+      }
+    }
+  }
+  &-tpbt{
+    &--{
+      &none{
+        border-top: none!important;
+        border-bottom: none!important;
+      }
+    }
+  }
+}
+.txt{
+  &-aln{
+    &--{
+      &rt{
+        text-align: right;
+      }
+    }
+  }
+}

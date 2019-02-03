@@ -1,0 +1,150 @@
+@import "../styles/variables.scss";
+.promisepay{
+	&__navtab{
+		width: 200px;
+		margin: 0 auto 20px;
+		border-radius: 4px; 
+	}
+	&__navtabcont{
+		padding: 0;
+		line-height: 10px;
+	}
+	&__navtablist{
+		list-style: none;
+		line-height: 10px;
+	}
+	@media all and (-ms-high-contrast:none)
+     {
+		&__navtablist{
+			list-style-image: url(data:0);
+			display: inline;
+		}
+     }
+	&__navtablink{
+		border: solid 1px $lightGreyColor;
+		text-decoration: none;
+		text-align: center;
+		@include fontStyling($family: 'Roboto', $size: 14px, $color: $btn-color);
+		min-width: 97px;
+	    float: left;
+		padding: 10px 0;
+		font-weight: 500 !important;
+	}
+	&--navtablinkactive{
+		background: $navTabBgColor;
+		color: $whiteColor!important;
+		border: solid 1px $navTabBgColor;
+	}
+	&--navtablinkfirst{
+		border-radius: 4px 0 0 4px!important;
+		border-right: none;
+	}
+	&--navtablinklast{
+		border-radius: 0 4px 4px 0!important;
+		border-left: none;
+	}
+	&__heading{
+		@include fontStyling($family: 'Roboto', $size: 20px!important, $color: $blackColor);
+		margin-bottom: 48px;
+		font-weight: 300 !important;
+	}
+	&__list{
+		margin-bottom: 10px;
+		width: 100%;
+    	float: left;
+		eds-dropdown .eds-dropdown-trigger{
+			font-size: 14px;
+		}
+	}
+	&__label{
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $btn-color);
+		min-width: 210px;
+		float: left;
+		padding-top: 7px;
+		position: relative;
+	}
+	&__required{
+	    position: absolute;
+	    top: 8px;
+	    font-size: 14px;
+	    font-family: "Roboto-Regular";
+	    font-weight: normal;
+	    color: $btn-color;
+	    left: -16px;
+	}
+	&__input{
+		border: solid 1px $lightGreyColor;
+		padding: 9px 5px;
+		background: $whiteColor;
+		width: 140px;
+		float: left;
+		border-radius: 4px;
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: $font-primary-color);
+	}
+	&--readonly{
+		background: $whiteLightColor;
+	}
+	&--smlwidth{
+		width: 50px;
+		margin-left: 10px;
+	}
+	&__output{
+		padding-top: 5px;
+	}
+	&__btncont{
+		margin: 0!important;
+		border-radius: 0 0 4px 4px;
+		border-top: 0!important;
+		.btn--ok{
+			background-color: $promise-pay-activity-tab;
+			border: solid 1px $promise-pay-activity-tab;
+		}
+	}
+	&__help{
+		float: right;
+		border-radius: 4px;
+		padding: 5px;
+		border: solid 1px $btn-color;
+	}
+	&__helpimg{
+		width: 20px;
+		height: 20px;
+		float: left;
+	}
+	&__innertab{
+		display: none;
+	}
+	&--selectedtab{
+		display: block;
+	}
+	&__calendar{
+		padding: 6px 20px 6px 20px;
+		background: #f6f6f6;
+		float: left;
+		vertical-align: middle;
+		border-radius: 0 4px 4px 0;
+		border: solid 1px #ccc;
+		border-left: none;
+	}
+	&--datefield{
+		border-radius: 4px 0 0 4px;
+	}
+	&__caldrimg{
+		vertical-align: middle;
+	}
+	&__output{
+		font-size: 14px;
+	}
+	&__calbutton{
+		padding: 0;
+		margin: 0;
+		border-style: none;
+	}
+}
+.eds{
+	&--promisecont{
+		margin-bottom: 0!important;
+		border-radius: 4px 4px 0 0;
+		padding: 33px 38px;
+	}
+}
