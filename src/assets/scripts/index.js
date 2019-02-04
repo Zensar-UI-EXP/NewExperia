@@ -3,6 +3,7 @@ import 'material-icons';
 import '../styles/app.scss';
 import '../styles/eds-global-styles.scss';
 
+import '../styles/main.scss';
 import '../styles/header.scss';
 import '../styles/search.scss';
 import '../styles/caseList.scss';
@@ -18,4 +19,4 @@ import '../styles/eds-tag.scss';
 import '../styles/activities.scss';
 import '../styles/contact-details.scss';
 import '../styles/promise-pay.scss';
-import '../scripts/promise-pay.js'
+import '../scripts/promise-pay.js';

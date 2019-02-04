@@ -35,21 +35,23 @@ switchParentTab = function (tabId, focusOnNotes) {
 	panelElement.setAttribute("active", true);
 	panelElement.setAttribute("aria-hidden", false);
 	panelElement.setAttribute("tabindex", "0");
-	if (tabId == 3) {
-		document.getElementById("promiseActivity").click();
-		document.getElementById("promise__actsection").children[0].children[1].children[0].classList.add("promisepay--linkactive");
-	}
-	let accountsActivityElement = document.getElementById("accountsActivity");
-	if (focusOnNotes) {
-		let accountsNotesElement = accountsActivityElement.children[1];
-		getElement("accountsActivity", false, 0, accountsNotesElement, true);
-		let noteElement = document.getElementById("notes__text");
-			noteElement.focus();
-	} else {
-		let accountsNotesElement = accountsActivityElement.children[1];
-		getElement("accountsActivity", true, -1, accountsNotesElement);
-	}
+	// if (tabId == 3) {
+	// 	document.getElementById("promiseActivity").click();
+	// 	document.getElementById("promise__actsection").children[0].children[1].children[0].classList.add("promisepay--linkactive");
+	// }
+	// let accountsActivityElement = document.getElementById("accountsActivity");
+	// if (focusOnNotes) {
+	// 	let accountsNotesElement = accountsActivityElement.children[1];
+	// 	getElement("accountsActivity", false, 0, accountsNotesElement, true);
+	// 	let noteElement = document.getElementById("notes__text");
+	// 		noteElement.focus();
+	// } else {
+	// 	let accountsNotesElement = accountsActivityElement.children[1];
+	// 	getElement("accountsActivity", true, -1, accountsNotesElement);
+	// }
 }
+
+switchParentTab(3);
 
 setTabAria = function (element, setProperty, setTabindex, removeAttr) {
 	if (element && !removeAttr) {

@@ -1,0 +1,348 @@
+@import "../styles/variables.scss";
+.subpage{
+    &__{
+        &alertinfo{
+            margin: 10px 15px 0;
+            min-height: 70px;
+            border: solid 1px #fad9dd;
+            border-radius: 5px;
+            overflow: hidden;
+            font-size: 14px;
+        }
+        &alertleft{
+            width: 15%;
+            background: #fad9dd;
+            float: left;
+            height: 70px;
+        }
+        &alertright{
+            width: 85%;
+            float: left;
+            background: #ffffff;
+            padding: 10px 0 15px;
+        }
+        &alertmessage{
+            margin: 0 15px;
+        }
+        &alerticon{
+            background: url(../images/alert.png) no-repeat 0 0 transparent;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 15px auto 0;
+        }
+        &arrangeheading{
+            float: left;
+            @include fontStyling($family: 'Roboto-Regular', $size: 20px!important, $color: $lightFontColor);
+            margin-top: 10px;
+        }
+        &arrangecont{
+            width: 100%;
+            border-bottom: solid 1px #cccccc;
+            float: left;
+        }
+        &arrangeselect{
+            float: right;
+            margin-top: 0!important;
+            margin-bottom: 20px!important;
+            .eds-dropdown-trigger .eds-dropdown-arrow{
+                right: 5px;
+            }
+            .eds-dropdown-trigger{
+                background: none;
+                padding-right: 20px;
+            }
+        }
+        &createarrange{
+            float: left;
+            margin: 35px 0 35px;
+            width: 100%;
+            @include fontStyling($family: 'Roboto-Regular', $size: 22px!important, $color: $lightFontColor);
+        }
+        &arrangeprogresscont{
+            margin: 0 50px;
+            position: relative;
+        }
+        &arrangeprogressline{
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #cccccc;
+            left: 0;
+            top: 40px;
+        }
+        &arrangeprogress{
+            float: left;
+            width: 100%;
+            position: relative;
+        }
+        &arrangetaskcircle{
+            background: #cccccc;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 22px;
+            &:before{
+                background: #ffffff;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                content: "";
+                border-radius: 50%;
+                top: 50%;
+                margin-left: -6px;
+                left: 50%;
+                margin-top: -6px;
+            }
+        }
+        &arrangetask{
+            position: absolute;
+            left: -10px;
+            top: 8px;
+        }
+        &arrangetaskinfo{
+            position: absolute;
+            margin-left: -10px;
+            left: 50%;
+            top: -20px;
+        }
+        &arrangeform{
+            float: left;
+            width: 100%;
+            margin-top: 100px;
+        }
+        &arrangeforminner{
+            float: left;
+            width: 100%;
+        }
+        &arrangeformlabel{
+            float: left;
+            width: 50%;
+            padding-top: 5px;
+            @include fontStyling($family: 'Roboto-Medium', $size: 16px!important, $color: #333333);
+        }
+        &arrangeformlist{
+            float: left;
+            width: 60%;
+            margin-bottom: 10px;
+        }
+        &arrangeforminput{
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid 1px #cccccc;
+        }
+        &arrangeformselect{
+            float: right;
+            margin-top: 0!important;
+            margin-bottom: 20px!important;
+            width: 50%;
+            .eds-dropdown-trigger .eds-dropdown-arrow{
+                right: 5px;
+            }
+            .eds-dropdown-trigger{
+                background: none;
+                padding-right: 20px;
+            }
+        }
+        &arrangeformbuton{
+            float: right;
+            padding: 10px;
+            background: #426da9;
+            border-radius: 5px;
+            border: none;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
+            margin: 30px 0;
+        }
+        &arrangegraph{
+            border-top: solid 1px #cccccc;
+            float: left;
+            width: 100%;
+        }
+        &arrangegraphhead{
+            margin: 30px 0;
+            @include fontStyling($family: 'Roboto-Regular', $size: 22px!important, $color: #333333);
+        }
+        &graphcont{
+            border: solid 1px #cccccc;
+            text-align: center;
+            border-radius: 5px;
+            padding: 15px 0;
+        }
+        &graphimg{
+            width: 96%;
+        }
+        &sustaincont{
+            float: left;
+            width: 100%;
+            padding: 35px 0 30px;
+            border-bottom: solid 1px #cccccc;
+            margin-bottom: 35px;
+        }
+        &sustainlist{
+            float: left;
+            width: 31%;
+            border: solid 1px #cccccc;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 3.5%;
+            &:nth-child(last){
+                margin-right: 0;
+            }
+        }
+        &sustainhead{
+            padding: 20px;
+            background: #f6f6f6;
+        }
+        &sustainnumber{
+            float: left;
+            @include fontStyling($family: 'Roboto-Medium', $size: 46px!important, $color: #333333);
+            margin-right: 10px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        &sustainheading{
+            float: left;
+            width: 80%;
+            @include fontStyling($family: 'Roboto-Medium', $size: 16px!important, $color: #333333);
+        }
+        &sustaindesc{
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #333333);
+        }
+        &sustaintime{
+            @include fontStyling($family: 'Roboto-Regular', $size: 16px!important, $color: #333333);
+            padding: 20px 0;
+            text-align: center;
+            border-top: solid 1px #cccccc;
+            border-bottom: solid 1px #cccccc;
+        }
+        &sustaindetails{
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+        }
+        &sustaindetailsinner{
+            padding: 15px;
+        }
+        &sustaindetailslabel{
+            @include fontStyling($family: 'Roboto-Medium', $size: 16px!important, $color: #666666);
+            text-transform: uppercase;
+            margin-bottom: 3px;
+            float: left;
+            width: 100%;
+        }
+        &sustaindetailsamount{
+            @include fontStyling($family: 'Roboto-Regular', $size: 16px!important, $color: #333333);
+        }
+        &sustainselectbutton{
+            background: #edf4fa;
+            border-radius: 5px;
+            border: solid 1px #426da9;
+            padding: 5px 10px;
+            float: right;
+            margin-bottom: 25px;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            margin-left: 15px;
+            min-width: 80px;
+        }
+        &sustaineditbutton{
+            float: right;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            background: transparent;
+            border: none;
+            padding: 5px 10px;
+        }
+        &previewschedulebutton{
+            background: #edf4fa;
+            border-radius: 5px;
+            border: solid 1px #426da9;
+            padding: 5px 10px;
+            float: right;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+        }
+        &createarrangebutton{
+            background: #426da9;
+            border-radius: 5px;
+            border: solid 1px #426da9;
+            padding: 5px 10px;
+            float: right;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
+            margin-left: 20px;
+        }
+        &sustainbuttons{
+            margin-bottom: 20px;
+            float: left;
+            width: 100%;
+        }
+    }
+}
+.aln-{
+    &at--{
+        &middle{
+            left: 50%;
+            .subpage__arrangetaskinfo{
+                margin-left: -15px;
+            }
+        }
+        &end{
+            left: auto;
+            right: 0;
+            .subpage__arrangetaskinfo{
+                margin-left: -30px;
+            }
+        }
+    }
+}
+.progress--{
+    &active{
+        .subpage__arrangetaskinfo{
+            color: #e63888;
+        }
+        .subpage__arrangetaskcircle{
+            background: #e63888;
+        }
+    }
+}
+.clear--{
+    &both{
+        clear: both!important;
+    }
+}
+.pull--{
+    &left{
+        float: left!important;
+    }
+}
+.sustain--{
+    &active{
+        &.subpage__{
+            &sustainlist{
+                border-color: #426da9;
+            }
+        }
+        .subpage__{
+            &sustainhead{
+                background: #426da9;
+            }
+            &sustainnumber{
+                color: #ffffff!important;
+            }
+            &sustainheading{
+                color: #ffffff!important;
+            }
+            &sustaindesc{
+                color: #ffffff!important;
+            }
+            &sustaintime{
+                border-color: #426da9;
+                font-family: 'Roboto-Medium'!important;
+            }
+            &sustainselectbutton{
+                background: #426da9;
+                color: #ffffff!important;
+            }
+        }
+    }
+}

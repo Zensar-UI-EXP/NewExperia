@@ -70,6 +70,11 @@ float: left;
       margin-top: 0!important;
     }
   }
+  &-rt{
+    &--none{
+      margin-right: 0 !important;
+    }
+  }
 }
 .wdh{
   &-per{
@@ -81,6 +86,9 @@ float: left;
     }
     &--35{
       width: 35%!important;
+    }
+    &--100{
+      width: 100%!important;
     }
   }
 }

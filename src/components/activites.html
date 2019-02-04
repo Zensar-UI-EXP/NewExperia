@@ -1,65 +1,61 @@
 <eds-tabs background="gray" class="eds" role="complementary">
     <ul class="tab-labels style-scope eds-tabs" role="tablist">
         <li role="presentation" class="style-scope eds-tabs">
-            <a href="javascript:void(0);" id="tab-activities" aria-selected="true" role="tab" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" id="tab-alerts" aria-selected="true" role="tab" class="style-scope eds-tabs">
+                Alerts
+            </a>
+        </li>
+        <li role="presentation" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" id="tab-activities" aria-selected="false" role="tab" class="style-scope eds-tabs">
                 Activities
             </a>
         </li>
     </ul>
-    <ul class="style-scope eds-tabs activity-tabs">
-        <li role="presentation" class="style-scope eds-tabs promisepay__link">
-            <a aria-selected="false" aria-controls="tab-panel-3" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
-                Escalate to Manager
-            </a>
-        </li>
-        <li onclick="toggleMemo()" role="presentation" class="style-scope eds-tabs memo-tab bor-top--1 memodetail">
-            <a aria-expanded="false" aria-controls="expandable" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
-            <ul id="expandable">
-                <li>
-                    <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
-                        Standard Memo
-                    </a>
-                </li>
-                <li>
-                    <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
-                        Important Memo
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li role="presentation" class="style-scope eds-tabs">
-            <a aria-controls="Move to Arrangement"
-                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Move to Arrangement</a>
-        </li>
-        <li role="presentation" class="style-scope eds-tabs">
-                <a aria-controls="Product Request"
-                    aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Product Request <span class="eds-accordion-caret"></span></a>
+    <eds-tab label="Activities" class="eds" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5" role="tabpanel">
+        <ul class="style-scope eds-tabs activity-tabs">
+            <li role="presentation" class="style-scope eds-tabs promisepay__link">
+                <a aria-selected="false" aria-controls="tab-panel-3" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
+                    Escalate to Manager
+                </a>
             </li>
-        <li role="presentation" class="style-scope eds-tabs">
-            <a  aria-controls="Referral" aria-selected="false"
-                href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Referral</a>
-        </li>
-        <li role="presentation" class="style-scope eds-tabs">
-            <a  aria-controls="Report Account Exceptions"
-                aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Report Account
-                Exceptions <span class="eds-accordion-caret"></span></a>
-        </li>
-    </ul>
-    <eds-tab label="Alerts" class="eds" aria-hidden="true" id="tab-panel-0" aria-labelledby="tab-0" role="tabpanel">
-        <p>
-            <eds-alert motif="error" background="white" class="eds">
-                <div class="eds-alert-sidebar style-scope eds-alert"></div>
-                <div class="eds-alert-close-icon style-scope eds-alert">×</div>
-                <div class="eds-alert-content style-scope eds-alert">
-                    This is an example of an alert note
-                </div>
-            </eds-alert>
-        </p>
+            <li onclick="toggleMemo()" role="presentation" class="style-scope eds-tabs memo-tab bor-top--1 memodetail">
+                <a aria-expanded="false" aria-controls="expandable" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">Memo <span class="eds-accordion-caret"></span></a>
+                <ul id="expandable">
+                    <li>
+                        <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                            Standard Memo
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">
+                            Important Memo
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li role="presentation" class="style-scope eds-tabs">
+                <a aria-controls="Move to Arrangement" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Move to Arrangement</a>
+            </li>
+            <li role="presentation" class="style-scope eds-tabs">
+                <a aria-controls="Product Request" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Product Request <span class="eds-accordion-caret"></span></a>
+            </li>
+            <li role="presentation" class="style-scope eds-tabs">
+                <a  aria-controls="Referral" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Referral</a>
+            </li>
+            <li role="presentation" class="style-scope eds-tabs">
+                <a  aria-controls="Report Account Exceptions" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Report Account Exceptions <span class="eds-accordion-caret"></span></a>
+            </li>
+        </ul>
     </eds-tab>
-    <eds-tab label="Activities" class="eds" role="tabpanel">
-        <p>
-            Activities content...
-        </p>
+    <eds-tab label="Alerts" class="eds" active="true" aria-hidden="false" id="tab-panel-4" aria-labelledby="tab-4" role="tabpanel">
+        <div class="subpage__alertinfo">
+            <div class="subpage__alertleft">
+                <i class="subpage__alerticon"></i>
+            </div>
+            <div class="subpage__alertright eds-alert-content style-scope eds-alert">
+                <p class="subpage__alertmessage">This is an example of an alert note.</p>
+            </div>
+        </div>
     </eds-tab>
 </eds-tabs>
 
