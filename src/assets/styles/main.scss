@@ -155,6 +155,11 @@
             border: none;
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
             margin: 30px 0;
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
         }
         &arrangegraph{
             border-top: solid 1px #cccccc;
@@ -246,6 +251,11 @@
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
             margin-left: 15px;
             min-width: 80px;
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
         }
         &sustaineditbutton{
             float: right;
@@ -253,6 +263,10 @@
             background: transparent;
             border: none;
             padding: 5px 10px;
+            cursor: pointer;
+            &:hover{
+				color: #004590;
+			}
         }
         &previewschedulebutton{
             background: #edf4fa;
@@ -261,6 +275,11 @@
             padding: 5px 10px;
             float: right;
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
         }
         &createarrangebutton{
             background: #426da9;
@@ -270,11 +289,128 @@
             float: right;
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
             margin-left: 20px;
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
         }
         &sustainbuttons{
             margin-bottom: 20px;
             float: left;
             width: 100%;
+        }
+        &arrangereviewcont{
+            float: left;
+            width: 100%;
+            margin-top: 100px;
+        }
+        &arrangereview{
+            float: left;
+            width: 50%;
+            position: relative;
+        }
+        &arrangereviewhead{
+            text-transform: uppercase;
+            padding: 15px;
+            @include fontStyling($family: 'Roboto-Medium', $size: 14px!important, $color: #000000);
+        }
+        &arrangereviewblock{
+            border-top: solid 1px #cccccc;
+            padding: 10px 0;
+            float: left;
+            width: 100%;
+        }
+        &arrangereviewlist{
+            margin: 5px 0;
+            float: left;
+            width: 100%;
+        }
+        &arrangereviewlabel{
+            @include fontStyling($family: 'Roboto-Medium', $size: 12px!important, $color: #cccccc);
+            text-transform: uppercase;
+            float: left;
+            margin-left: 15px;
+        }
+        &arrangereviewvalue{
+            float: right;
+            margin-right: 15px;
+            @include fontStyling($family: 'Roboto-Regular', $size: 12px!important, $color: #000000);
+        }
+        &arrangereviewoutline{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border: solid 1px #426da9;
+        }
+        &arrangereviewbtns{
+            float: left;
+            width: 100%;
+            margin: 30px 0;
+        }
+        &arrangereviewbtn{
+            background: #edf4fa;
+            border-radius: 5px;
+            border: solid 1px #426da9;
+            padding: 5px 10px;
+            float: right;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            min-width: 150px;
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
+        }
+        &arrangereviewcmptbtn{
+            background: #426da9;
+            border-radius: 5px;
+            border: solid 1px #426da9;
+            padding: 5px 10px;
+            float: right;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
+            min-width: 150px;
+            cursor: pointer;
+            &:hover{
+				background: #004590;
+                color: #ffffff;
+			}
+        }
+        &sendarrangetbl{
+            width: 100%;
+            border-top: solid 1px #cccccc;
+            border-bottom: solid 1px #cccccc;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
+        }
+        &sendarrangecol{
+            padding: 20px 10px;
+            border-top: solid 1px #cccccc;
+            border-bottom: solid 1px #cccccc;
+        }
+        &arrangesetup{
+            margin-top: 60px;
+            float: left;
+            width: 100%;
+            border-bottom: solid 1px #ccc;
+            padding-bottom: 40px;
+        }
+        &arrangesetupdesc{
+            float: left;
+            width: 100%;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
+            margin-bottom: 15px;
+        }
+        &arrangesetuplabel{
+            float: left;
+            line-height: 32px;
+            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
+        }
+        &arrangesetuplist{
+            float: left;
+            width: 100%;
+            margin-top: 5px;
         }
     }
 }
@@ -302,6 +438,25 @@
         }
         .subpage__arrangetaskcircle{
             background: #e63888;
+        }
+    }
+    &complete{
+        .subpage__arrangetaskcircle{
+            background: #e63888;
+            &::after {
+                width: 6px;
+                height: 12px;
+                border-right: solid 2px #ffffff;
+                border-bottom: solid 2px #ffffff;
+                left: 7px;
+                top: 3px;
+                content: "";
+                transform: rotate(45deg);
+                position: absolute;
+            }
+            &::before{
+                display: none;
+            }
         }
     }
 }
@@ -345,4 +500,83 @@
             }
         }
     }
+}
+.mar-{
+    &lt--{
+        &25{
+            margin-left: 25px!important;
+        }
+    }
+}
+.txt-{
+    &aln--{
+        &rt{
+            text-align: right;
+        }
+    }
+}
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px #426da9;
+    background: #fff;
+    margin: 0 10px 0 0;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 5px;
+    &:checked{
+        position: relative;
+        &::after {
+            position: absolute;
+            width: 7px;
+            height: 12px;
+            border-right: solid 3px #426da9;
+            border-bottom: solid 3px #426da9;
+            left: 6px;
+            top: 2px;
+            content: "";
+            transform: rotate(45deg);
+        }
+    }
+}
+.roundedcheckbox{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid 1px #47780c;
+    background: #fff;
+    margin: 0 15px 0 0;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    top: 5px;
+    &:checked{
+        position: relative;
+        background: #47780c;
+        &::after {
+            position: absolute;
+            width: 6px;
+            height: 12px;
+            border-right: solid 2px #ffffff;
+            border-bottom: solid 2px #ffffff;
+            left: 6px;
+            top: 2px;
+            content: "";
+            transform: rotate(45deg);
+        }
+    }
+}
+.row--{
+    &selected{
+        @include fontStyling($family: 'Roboto-Medium', $size: 14px!important, $color: #000000);
+    }
+}
+#createarrangement, #completearrangement, #generatearrangement{
+    display: none;
 }

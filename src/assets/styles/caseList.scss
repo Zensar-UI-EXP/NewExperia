@@ -189,7 +189,7 @@
 		}
 		&tblcont{
 			height: 395px;
-			overflow: auto;
+			overflow: hidden;
 			border-bottom: solid 1px #cccccc;
 			border-radius: 0 0 5px 5px;
 		}
@@ -243,7 +243,10 @@
 		}
 		&rowselect{
 			float: left;
-			margin: 12px 0 10px 0;
+			margin: 4px 0 10px 0;
+			padding: 7px 15px;
+			border-radius: 5px;
+			position: relative;
 			option{
 				padding: 10px;
 			}
@@ -306,5 +309,10 @@
 			right: 2px;
 			top: 0;
 		}
+	}
+}
+.cur--{
+	&pointer{
+		cursor: pointer;
 	}
 }

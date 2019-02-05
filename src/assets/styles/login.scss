@@ -1,0 +1,52 @@
+@import "../styles/variables.scss";
+.logincont{
+    width: 400px;
+    position: fixed;
+    top: 50%;
+    height: 190px;
+    left: 50%;
+    margin-top: -95px;
+    margin-left: -200px;
+    background: #e6e6e6;
+    border: solid 1px #cccccc;
+    border-radius: 5px;
+    &__{
+        &form{
+            margin: 25px 25px 25px;
+        }
+        &formlist{
+            margin: 0 0 15px;
+            float: left;
+            width: 100%;
+        }
+        &formlabel{
+            width: 100px;
+            float: left;
+            line-height: 36px;
+        }
+        &forminput{
+            width: 100%;
+            float: right;
+            padding: 10px;
+            border-radius: 5px;
+            border: solid 1px #cccccc;
+        }
+        &formbutton{
+            float: right;
+        }
+        &logo {
+            width: 117px;
+            height: 55px;
+            position: absolute;
+            top: -58px;
+            padding: 0;
+            margin: 0;
+            left: 15px;
+        }
+        &logolink {
+            text-indent: -99999em;
+            @include headerIcons($width: 100%, $height: 100%);
+		    @include coverImage($imgurl: '../images/experian__logolatest.png');
+        }
+    }
+}

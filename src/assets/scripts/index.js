@@ -17,6 +17,5 @@ import '../styles/eds-icon.scss';
 import '../styles/eds-timeline-item.scss';
 import '../styles/eds-tag.scss';
 import '../styles/activities.scss';
-import '../styles/contact-details.scss';
-import '../styles/promise-pay.scss';
+import '../styles/login.scss';
 import '../scripts/promise-pay.js';

@@ -77,6 +77,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: true,
             title: 'Experia',
+            filename: 'dashboard.html',
+            template: 'dashboard.html',
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            hash: true,
+            title: 'Experia',
             filename: 'accountsummary.html',
             template: 'accountsummary.html',
             inject: false

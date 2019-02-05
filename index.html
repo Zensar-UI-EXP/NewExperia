@@ -9,12 +9,26 @@
 </head>
 <body class="eds eds-show-body">
     <div class="container">
-        <a tabindex="1" href="#dashboard__main" class="skiplink">Skip to main content</a>
-        ${require('./src/components/header.html')}
-        ${require('./src/components/secondaryHeader.html')}
-        <main id="dashboard__main">
-            ${require('./src/components/search.html')} 
-            ${require('./src/components/caseTableList.html')}
+        <a tabindex="1" href="#loginmain" class="skiplink">Skip to main content</a>
+        <main class="logincont" id="loginmain">
+            <h1 class="logincont__logo">
+                <a id="logincont__logoid" tabindex="1" class="logincont__logolink" href="javascript:void(0);" title="Experian">Experian</a>
+            </h1>
+            <form class="logincont__form" action="dashboard.html">
+                <ul class="logincont__formcont">
+                    <li class="logincont__formlist">
+                        <!--<label class="logincont__formlabel">Email Id</label>-->
+                        <input class="logincont__forminput" type="email" placeholder="Email Id" value="" />
+                    </li>
+                    <li class="logincont__formlist">
+                        <!--<label class="logincont__formlabel">Password</label>-->
+                        <input class="logincont__forminput" type="password" placeholder="Password" value="" />
+                    </li>
+                    <li class="logincont__formlist">
+                        <button class="logincont__formbutton btn">Login</button>
+                    </li>
+                </ul>
+            </form>
         </main>
     </div>
     <script src=build/bundle.js></script>

@@ -69,6 +69,9 @@
 			border: none;
 			padding: 7px 0;
 			font-family: Roboto !important;
+			&:hover{
+				background: #004590;
+			}
 		}
 	}
 	&__input{
