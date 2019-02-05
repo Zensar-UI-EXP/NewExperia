@@ -42,6 +42,18 @@ eds-accordion {
 					display: none;
 				}
 			}
+			.eds-accordion-collapse{
+				width: 18px;
+				float: right;
+				margin-top: -10px;
+			}
+			.eds-label--width{
+				display: inline-block;
+				width: 85%;
+			}
+			.eds-pl--27{
+				padding-left: 27px;
+			}
 			.eds-accordion-caret {
 				position: absolute;
 				right: 20px;
