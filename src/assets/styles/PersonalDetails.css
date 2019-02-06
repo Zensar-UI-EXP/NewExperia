@@ -5,7 +5,8 @@
 @font-face{font-family:'OpenSans-Bold';src:url(../fonts/OpenSans-Bold.eot?#iefix) format('embedded-opentype'),url(../fonts/OpenSans-Bold.woff) format('woff'),url(../fonts/OpenSans-Bold.ttf) format('truetype'),url(../fonts/OpenSans-Bold.svg#Roboto-Light) format('svg');font-weight:400;font-style:normal}
 .account{
     padding: 30px 0;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-right: 10%;
 }
 .account__title{
     font-family: "Roboto-Bold";
@@ -63,7 +64,7 @@
 .account__progress:after{
     content: '';
     position: absolute;
-    width:30%;
+    width:37%;
     left:0;
     height: 10px;
     background:#79137d;
@@ -72,8 +73,8 @@
 .account__progress:before{
     content: '';
     position: absolute;
-    width: 50%;
-    left: 50%;
+    width: 42%;
+    left: 58%;
     height: 10px;
     background: white!important;
     border: 1px solid #cccccc;
@@ -97,7 +98,7 @@
     font-family: "Roboto-Regular";
     font-size: 14px;
     display: inline-block;
-    width: 33%;
+    width: calc(33% - 20px);
     text-align: center;
 }
 .account__expand{
@@ -106,8 +107,8 @@
 .mg-lft--10{
     margin-left: 10px;
 }
-.mg-lft--120{
-    margin-left: 120px
+.mg-lft--20{
+    margin-left: 20px;
 }
 .mg-lft--45{
     margin-left: 45px
@@ -115,6 +116,16 @@
 .font--light{
     font-family: "Roboto-Light";
 }
+.txt--right{
+    text-align: right;
+}
+.txt--center{
+    text-align: center;
+}
+.txt--left{
+    text-align: left;
+}
+
 
 contactdetails__logo{
     display: inline-block;
