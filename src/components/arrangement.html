@@ -2,9 +2,25 @@
     <main class="subpage__tabdetailmain" id="container__profile">
         <div class="subpage__tabdetailinner containerFlex marginTop20">
             <div class="subpage__tableft containerSide left" id="profileContact">
-                
+                ${require('./profileDetails.html')}
+                ${require('./collectionInfo.html')}
+                ${require('./arrearsinformation.html')}
+                ${require('./customerPreference.html')}
+                ${require('./combineAuthorisedParties.html')}
             </div>
             <div class="subpage__tabmiddle containerMiddle">
+                <div class="promisepay">
+                        <nav class="promisepay__navtab">
+                            <ul class="promisepay__navtabcont">
+                                <li class="promisepay__navtablist">
+                                    <a class="promisepay__navtablink promisepay--navtablinkfirst" href="javascript:void(0);" title="Account">Account</a>
+                                </li>
+                                <li class="promisepay__navtablist">
+                                    <a class="promisepay__navtablink promisepay--navtablinklast promisepay--navtablinkactive" href="javascript:void(0);" title="Activity">Activity</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 ${require('./arrangementDetail.html')}
             </div>
             <div class="subpage__tabright containerSide" id="profileActivities">

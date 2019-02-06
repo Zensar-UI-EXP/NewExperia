@@ -51,8 +51,6 @@ switchParentTab = function (tabId, focusOnNotes) {
 	// }
 }
 
-switchParentTab(3);
-
 gotoPage = function (pagePath) {
 	window.location.href = pagePath;
 }
@@ -124,11 +122,12 @@ addRemoveClass = function (headingId, panelId) {
 }
 const path = window.location.pathname;
 const page = path.split("/").pop();
-if (page && page !== "index.html") {
+if (page && page !== "index.html" && page !== "dashboard.html") {
 	document.getElementsByClassName("textNote")[1].removeAttribute("for");
 	document.getElementsByClassName("textNote")[2].removeAttribute("for");	
 	addRemoveClass("accountFirstHeading", "accountFirstPanel");
 	addRemoveClass("collectionHeading", "collectionPanel");
+	switchParentTab(1);
 }
 showhideblocks = function (showElementId, hideElementId) {
 	document.getElementById(showElementId).style.display = "block";

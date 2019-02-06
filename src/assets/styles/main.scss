@@ -580,3 +580,597 @@
 #createarrangement, #completearrangement, #generatearrangement{
     display: none;
 }
+eds-tag[motif='primary'] {
+    background: #d2e7f7;
+    color: #333333;
+}
+
+.cell--span-2 {
+    display: inline-block;
+    width: 99%;
+    font-size: 13px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.arrears__data {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.txt--transform-none {
+    text-transform: none;
+}
+
+.txt--normal {
+    font-weight: 400;
+}
+
+.txt--display-inline {
+    display: inline !important;
+}
+
+.labelsection__left {
+    float: left;
+}
+
+.labelsection__right {
+    float: right;
+}
+
+.mrg-left--10px {
+    margin-left: 10px;
+}
+
+.mrg-left--40px {
+    margin-left: 40px !important;
+}
+
+.mrg-top--30px {
+    margin-top: 30px !important;
+}
+
+.borderradius--top-none {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.borderradius--bottom-none {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.eds-accordion-add {
+    position: absolute;
+    right: 60px;
+    top: 12px;
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/add.png);
+}
+
+.clr--blue {
+    color: #0e6eb7;
+}
+
+.accountinfo__calendarcontainer {
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-top: 80px;
+}
+
+.accountinfo__calendartemplate {
+    padding: 10px 40px;
+
+}
+
+.accountinfo__calendar {
+  overflow: hidden;
+}
+
+.accountinfo__calendarview {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.accountinfo__switchmonth {
+    float: left;
+    width: 5%;
+    min-height: 253px;
+    display: table;
+}
+
+.accountinfo__monthviews {
+    float: left;
+    width: 90%;
+}
+
+.accountinfo__monthviewsection {
+    float: left;
+    width: 50%;
+}
+
+.accountinfo__monthview {
+    width: calc(100% - 20px - 1px);
+    padding: 0 10px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+.accountinfo__calendartitle {
+  font-weight: 600;
+  font-size: 13px;
+  display:block; 
+  padding: 5px 0;
+  text-align:center; 
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.accountinfo__calendarcells {
+    overflow:hidden;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.accountinfo__calendarheader {
+    font-weight: 500;
+    font-size: 13px;
+    display:block; 
+    text-align:center; 
+    display:inline-block; 
+    float:left;
+    width:14.285%; 
+    height:30px; 
+    overflow:hidden; 
+    line-height:30px;
+}
+
+.accountinfo__calendarcell{
+    font-weight: 400;
+    font-size: 13px;
+    text-align:center; 
+    width:14.285%; 
+    height:30px; 
+    display:inline-block; 
+    float:left; 
+    overflow:hidden; 
+    line-height:30px;
+    position: relative;
+}
+
+.circle--fill {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    background-color: transparent;
+}
+
+.circle--border {
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle--pos-center {
+    position: absolute;
+    margin-left: -12px;
+    margin-top: -13px;
+    left: 50%;
+    top: 50%;
+}
+
+.smallcircle--fill {
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.smallcircle--border {
+    width: 15px;
+    height: 15px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.accountinfo__multipleevents {
+    border-color: #6b2075;
+}
+
+.accountinfo__arrangement {
+    background-color: #b7bd11;
+}
+
+.accountinfo__debit {
+    background-color: #00b0a4;
+}
+
+.accountinfo__credit {
+    background-color: #0082a6;
+}
+
+.accountinfo__call {
+    background-color: #6b2075;
+}
+
+.accountinfo__communication {
+    background-color: #e63987;
+}
+
+.accountinfo__userconfig1 {
+    background-color: #ff8e1c;
+}
+
+.accountinfo__userconfig2 {
+    background-color: #fcd700;
+}
+
+.accountinfo__today {
+    background-color: #e1effa;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: -12.5px;
+    margin-top: -12.5px;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+
+.clr--white {
+    color: #fff;
+}
+
+.clr--purple {
+    color: #6b2075;
+}
+
+.devider {
+    width: 1px;
+    height: 200px;
+    background-color: #d6d6d6;
+    margin-top: 50px;
+    float: left;
+}
+
+.accountinfo__legendsection {
+    overflow: hidden;
+    background-color: #f5f5f5;
+    padding: 15px 0;
+}
+
+.accountinfo__calendarlegends {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.accountinfo__calendarlegend {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin: 4px 0;
+}
+
+.accountinfo__calendarlegendtext {
+    margin-left: 25px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.accountinfo__switchmonthlink {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.eds-previous-caret {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/left_arrow.png);
+    margin-top: -10px;
+}
+
+.eds-next-caret {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../images/right_arrow.png);
+    margin-top: -10px;
+}
+
+.pcc-eds-timeline-item [slot="slot-header-center"] {
+    font-size: 14px;
+}
+
+.timeline__day {
+    color:#7a7a7a;
+}
+
+.timeline__details {
+    font-weight: 400;
+    
+}
+
+.scale2 {
+    transform: scale(2);
+    vertical-align: bottom;
+}
+
+/* eds-icon[icon*="keyboard_arrow"] {
+    color: #0e6eb7;
+    margin-left: 5px;
+} */
+
+
+
+pcc-eds-timeline-item [slot="slot-header-center"] [slot="slot-header-right"] {
+    text-align: left !important;
+}
+
+pcc-eds-timeline-item .pagination {
+    border-left: 1px solid #d8d8d8;
+    margin-left: 53px;
+    /* min-height: 20px; */
+    padding-right: 30px;
+    text-align: center;
+}
+
+pcc-eds-timeline-item .section-pagination {
+    flex: 5;
+    margin-left: 20px;
+}
+
+.paginate {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.paginate__item {
+    display: inline;
+}
+
+.paginate__link {
+    font-weight: 700;
+    float: left;
+    padding: 8px 8px;
+    text-decoration: none;
+    margin: 0 4px;
+    /* transition: background-color .3s; */
+    /* border: 1px solid #ddd; */
+}
+
+.link--active {
+    color: #333333 !important;
+    border-bottom: 2px solid #af1685;
+}
+
+.link--disabled {
+    color: #7a7a7a !important;
+}
+
+.margin0 {
+    margin: 0 !important;
+}
+
+.margin-left--5px {
+    margin-left: 5px;
+}
+
+.padding-left--0 {
+    padding-left: 0;
+}
+
+.padding-right--0 {
+    padding-right: 0;
+}
+
+.font--normal {
+    font-weight: 400;
+}
+
+.pcc-eds-timeline-view {
+    padding-bottom: 15px;
+}
+
+.pagination__container {
+    display: flex;
+    flex: 5;
+    align-items: center;
+}
+
+.pagination__links {
+    /* display: flex; */
+    flex: 4;
+}
+
+.pagination__status {
+    /* display: flex; */
+    flex: 1;
+    font-weight: normal;
+}
+
+.pcc-eds-timeline-view {
+    padding-bottom: 15px !important;
+}
+
+.slot__datacontainer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+}
+
+.slot__datetemplate {
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.slot__datacontainer {
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.slot__dataitem {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+}
+
+.slot__dataheader {
+    color: #af1685;
+    margin-left: 5px;
+}
+
+.slot__datafield {
+    margin-left: 5px;
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.slot__value {
+    margin-left: 5px;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    display: inline-block;
+}
+.slot__updatedvalue {
+    background-color: #faecb9;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.brd-right--1px {
+    border-right: 1px solid #d6d6d6;
+}
+
+.upload__document {
+    background: url(../images/upload_document.png) 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -7px;
+}
+
+.document {
+    background: url(../images/document.png) 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: -9px;
+}
+.pos--relative {
+    position: relative;
+}
+.promisepay{
+	&__navtab{
+		width: 200px;
+		margin: 0 auto 20px;
+		border-radius: 4px; 
+	}
+	&__navtabcont{
+		padding: 0;
+		line-height: 10px;
+	}
+	&__navtablist{
+		list-style: none;
+		line-height: 10px;
+	}
+	@media all and (-ms-high-contrast:none)
+     {
+		&__navtablist{
+			list-style-image: url(data:0);
+			display: inline;
+		}
+     }
+	&__navtablink{
+		border: solid 1px $lightGreyColor;
+		text-decoration: none;
+		text-align: center;
+		@include fontStyling($family: 'Roboto', $size: 14px, $color: $btn-color);
+		min-width: 97px;
+	    float: left;
+		padding: 10px 0;
+		font-weight: 500 !important;
+	}
+	&--navtablinkactive{
+		background: $navTabBgColor;
+		color: $whiteColor!important;
+		border: solid 1px $navTabBgColor;
+	}
+	&--navtablinkfirst{
+		border-radius: 4px 0 0 4px!important;
+		border-right: none;
+	}
+	&--navtablinklast{
+		border-radius: 0 4px 4px 0!important;
+		border-left: none;
+    }
+}
+.notes-tab{
+    eds-accordion{
+        border-color: #426DA9;        
+    }
+    .note-container{
+        background-color: #426DA9;
+        eds-accordion-panel{
+            background-color: #426DA9;
+        }
+        .eds-accordion-label{
+            background: #426DA9!important;
+            color: #ffffff!important;
+        }
+        .table{
+            background: #ffffff!important;
+        }
+    }
+    .note-btn{
+        float: right;
+    }
+    .row > .cell{
+        float: right;
+    }
+    textarea{
+        padding: 10px 10px 0;
+        font-size: 14px!important;
+    }
+}

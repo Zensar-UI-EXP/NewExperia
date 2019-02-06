@@ -2,11 +2,26 @@
     <div class="subpage__tableft containerSide left" id="accountContact">
         ${require('./profileDetails.html')}
         ${require('./collectionInfo.html')}
+        ${require('./arrearsinformation.html')}
+        ${require('./incomeExpenditureInfo.html')}
         ${require('./customerPreference.html')}
-        ${require('./dca.html')}
+        ${require('./combineAuthorisedParties.html')}
     </div>
     <div class="subpage__tabmiddle containerMiddle" aria-label="Account summary section containing account details in tabular format" tabindex="0">
-        ${require('./remainder.html')}
+        <div class="promisepay">
+            <nav class="promisepay__navtab">
+                <ul class="promisepay__navtabcont">
+                    <li class="promisepay__navtablist">
+                        <a class="promisepay__navtablink promisepay--navtablinkfirst promisepay--navtablinkactive" href="javascript:void(0);" title="Account">Account</a>
+                    </li>
+                    <li class="promisepay__navtablist">
+                        <a class="promisepay__navtablink promisepay--navtablinklast" href="javascript:void(0);" title="Activity">Activity</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        ${require('./accountCalendar.html')}
+        ${require('./accountReminder.html')}
     </div>
     <div class="subpage__tabright containerSide" id="accountsActivity">
         ${require('./activites.html')}
