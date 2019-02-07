@@ -1,238 +1,265 @@
 <div id="arrangementinitial">
-    <div class="subpage__arrangecont">
-        <h4 class="subpage__arrangeheading">Propose a Solution</h4>
-        <eds-dropdown class="subpage__arrangeselect eds">
-            <label class="style-scope eds-dropdown">New Arrangement (recommended)</label>
-            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
-                <span class="eds-dropdown-value style-scope eds-dropdown">New Arrangement (recommended)</span>
-                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+    <div class="subpage__arrangebox">
+        <div class="subpage__arrangeboxinner">
+            <h5 class="subpage__createarrange">Create New Arrangement</h5>
+            <div class="subpage__arrangeprogresscont">
+                <div class="subpage__arrangeprogress">
+                    <div class="subpage__arrangeprogressline"> </div>
+                    <div class="subpage__arrangetask progress--active">
+                        <label class="subpage__arrangetaskinfo">Create</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                    <div class="subpage__arrangetask aln-at--middle">
+                        <label class="subpage__arrangetaskinfo">Review</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                    <div class="subpage__arrangetask aln-at--end">
+                        <label class="subpage__arrangetaskinfo">Complete</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                </div>
             </div>
-        </eds-dropdown>
-    </div>
-    <h5 class="subpage__createarrange">Create New Arrangement</h5>
-    <div class="subpage__arrangeprogresscont">
-        <div class="subpage__arrangeprogress">
-            <div class="subpage__arrangeprogressline"> </div>
-            <div class="subpage__arrangetask progress--active">
-                <label class="subpage__arrangetaskinfo">Create</label>
-                <span class="subpage__arrangetaskcircle"></span>
+            <div class="clear--both"></div>
+            <div class="subpage__arrangeform">
+                <ul class="subpage__arrangeforminner">
+                    <li class="subpage__arrangeformlist">
+                        <label class="subpage__arrangeformlabel">Type of Arrangement</label>
+                    </li>
+                    <li>
+                        <eds-dropdown class="subpage__arrangeformselect eds pull--left">
+                            <label class="style-scope eds-dropdown">Reducing Balance</label>
+                            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                                <span class="eds-dropdown-value style-scope eds-dropdown">Reducing Balance</span>
+                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                            </div>
+                        </eds-dropdown>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Promise to Pay
+                            <input class="search__dayinput" type="radio" checked="checked" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Variable
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Monthly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Fortnightly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Weekly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="clear"></li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Amount of Arrears</label>
+                        <span class="subpage__arrangeoverlabel">£</span>
+                        <input class="subpage__arrangeforminput pad-lt--50" type="text" value="6,100.00" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Agreed Final Balance</label>
+                        <span class="subpage__arrangeoverlabel">£</span>
+                        <input class="subpage__arrangeforminput pad-lt--50" type="text" value="440.00" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Agreed Start Balance</label>
+                        <i class="icon--arrcalendar"></i>
+                        <input class="subpage__arrangeforminput" type="text" value="Dec 16, 2019" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour mar-rt--none">
+                        <label class="subpage__arrangeformlabel">Agreed Start Balance</label>
+                        <eds-dropdown class="subpage__arrangeformselect eds pull--left">
+                            <label class="style-scope eds-dropdown">6</label>
+                            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                                <span class="eds-dropdown-value style-scope eds-dropdown">6</span>
+                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                            </div>
+                        </eds-dropdown>
+                    </li>
+                    <li class="subpage__arrangeformlist wdh-per--100">
+                        <hr/>
+                    </li>
+                    <li class="subpage__arrangeformlist wdh-per--100">
+                        <button class="subpage__arrangeformbuton" onclick="showhideblocks('generatearrangement', 'arrangementinitial')">Generate Agreement</button>
+                    </li>
+                </ul>
             </div>
-            <div class="subpage__arrangetask aln-at--middle">
-                <label class="subpage__arrangetaskinfo">Review</label>
-                <span class="subpage__arrangetaskcircle"></span>
-            </div>
-            <div class="subpage__arrangetask aln-at--end">
-                <label class="subpage__arrangetaskinfo">Complete</label>
-                <span class="subpage__arrangetaskcircle"></span>
-            </div>
+            <div class="clear--both"></div>
         </div>
     </div>
-    <div class="clear--both"></div>
-    <div class="subpage__arrangeform">
-        <ul class="subpage__arrangeforminner">
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">Type of Arrangement</label>
-                <eds-dropdown class="subpage__arrangeformselect eds pull--left">
-                    <label class="style-scope eds-dropdown">Reducing Balance</label>
-                    <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
-                        <span class="eds-dropdown-value style-scope eds-dropdown">Reducing Balance</span>
-                        <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
-                        <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+</div>
+<div id="generatearrangement">
+    <div class="subpage__arrangebox">
+        <div class="subpage__arrangeboxinner">
+            <h5 class="subpage__createarrange">Create New Arrangement</h5>
+            <div class="subpage__arrangeprogresscont">
+                <div class="subpage__arrangeprogress">
+                    <div class="subpage__arrangeprogressline"> </div>
+                    <div class="subpage__arrangetask progress--active">
+                        <label class="subpage__arrangetaskinfo">Create</label>
+                        <span class="subpage__arrangetaskcircle"></span>
                     </div>
-                </eds-dropdown>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">&nbsp;</label>
-                <label class="search__daylabel">
-                    Promise to Pay
-                    <input class="search__dayinput" type="radio" checked="checked" name="statsday" />
-                    <span class="search__daycheckmark"></span>
-                </label>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">&nbsp;</label>
-                <label class="search__daylabel">
-                    Variable
-                    <input class="search__dayinput" type="radio" name="statsday" />
-                    <span class="search__daycheckmark"></span>
-                </label>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">&nbsp;</label>
-                <label class="search__daylabel">
-                    Monthly
-                    <input class="search__dayinput" type="radio" name="statsday" />
-                    <span class="search__daycheckmark"></span>
-                </label>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">&nbsp;</label>
-                <label class="search__daylabel">
-                    Fortnightly
-                    <input class="search__dayinput" type="radio" name="statsday" />
-                    <span class="search__daycheckmark"></span>
-                </label>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">&nbsp;</label>
-                <label class="search__daylabel">
-                    Weekly
-                    <input class="search__dayinput" type="radio" name="statsday" />
-                    <span class="search__daycheckmark"></span>
-                </label>
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">Current Balance</label>
-                <input class="subpage__arrangeforminput" type="number" value="6,100" />
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">Agreed Final Balance</label>
-                <input class="subpage__arrangeforminput" type="number" value="500" />
-            </li>
-            <li class="subpage__arrangeformlist">
-                <label class="subpage__arrangeformlabel">Agreed Start Balance</label>
-                <input class="subpage__arrangeforminput" type="number" value="6,100" />
-            </li>
-            <li class="subpage__arrangeformlist wdh-per--100">
-                <button class="subpage__arrangeformbuton" onclick="showhideblocks('generatearrangement')">Generate Agreement</button>
-            </li>
-        </ul>
-    </div>
-    <div class="clear--both"></div>
-    <div id="generatearrangement">
-        <div class="subpage__arrangegraph">
-            <h5 class="subpage__arrangegraphhead">The arrangements we can offer you:</h5>
-            <div class="subpage__graphcont">
-                <img class="subpage__graphimg" src="../assets/images/graph.png" alt="Graph" />
+                    <div class="subpage__arrangetask aln-at--middle">
+                        <label class="subpage__arrangetaskinfo">Review</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                    <div class="subpage__arrangetask aln-at--end">
+                        <label class="subpage__arrangetaskinfo">Complete</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear--both"></div>
+            <div class="subpage__arrangetype">Arrangement Type</div>
+            <div class="subpage__sustaincont">
+                <div class="subpage__sustainlist">
+                    <div class="subpage__sustainhead">
+                        <span class="subpage__sustainnumber">1</span>
+                        <h6 class="subpage__sustainheading">Arrangement</h6>
+                        <p class="subpage__sustaindesc">50% sustainability</p>
+                    </div>
+                    <div class="subpage__sustaintime">
+                        Interest over time: £150.00
+                    </div>
+                    <div class="subpage__sustaindetails">
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Initial Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£4,500.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Date</label>
+                            <p class="subpage__sustaindetailsamount">21/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£600.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
+                            <p class="subpage__sustaindetailsamount">£60.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Start</label>
+                            <p class="subpage__sustaindetailsamount">30/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">End</label>
+                            <p class="subpage__sustaindetailsamount">25/03/2019</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <button class="subpage__sustainselectbutton">Select</button>
+                            <button class="subpage__sustaineditbutton">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage__sustainlist sustain--active">
+                    <div class="subpage__sustainhead">
+                        <span class="subpage__sustainnumber">2</span>
+                        <h6 class="subpage__sustainheading">Arrangement</h6>
+                        <p class="subpage__sustaindesc">80% sustainability</p>
+                    </div>
+                    <div class="subpage__sustaintime">
+                        Interest over time: £200.00
+                    </div>
+                    <div class="subpage__sustaindetails">
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Initial Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£3,000.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Date</label>
+                            <p class="subpage__sustaindetailsamount">21/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£500.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
+                            <p class="subpage__sustaindetailsamount">£50.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Start</label>
+                            <p class="subpage__sustaindetailsamount">30/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">End</label>
+                            <p class="subpage__sustaindetailsamount">25/09/2019</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <button class="subpage__sustainselectbutton">Selected</button>
+                            <button class="subpage__sustaineditbutton">Edit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="subpage__sustainlist mar-rt--none">
+                    <div class="subpage__sustainhead">
+                        <span class="subpage__sustainnumber">3</span>
+                        <h6 class="subpage__sustainheading">Arrangement</h6>
+                        <p class="subpage__sustaindesc">83% sustainability</p>
+                    </div>
+                    <div class="subpage__sustaintime">
+                        Interest over time: £250.00
+                    </div>
+                    <div class="subpage__sustaindetails">
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Initial Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£2,500.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Date</label>
+                            <p class="subpage__sustaindetailsamount">21/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
+                            <p class="subpage__sustaindetailsamount">£400.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
+                            <p class="subpage__sustaindetailsamount">£40.00</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">Start</label>
+                            <p class="subpage__sustaindetailsamount">30/06/2018</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <label class="subpage__sustaindetailslabel">End</label>
+                            <p class="subpage__sustaindetailsamount">25/12/2019</p>
+                        </div>
+                        <div class="subpage__sustaindetailsinner">
+                            <button class="subpage__sustainselectbutton">Select</button>
+                            <button class="subpage__sustaineditbutton">Edit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subpage__sustainbuttons">
+                <button class="subpage__createarrangebutton" onclick="showhideblocks('createarrangement', 'arrangementinitial')">Create Arrangement</button>
+                <button class="subpage__previewschedulebutton">Preview Schedule</button>
             </div>
         </div>
-        <div class="subpage__sustaincont">
-            <div class="subpage__sustainlist">
-                <div class="subpage__sustainhead">
-                    <span class="subpage__sustainnumber">1</span>
-                    <h6 class="subpage__sustainheading">Arrangement</h6>
-                    <p class="subpage__sustaindesc">50% sustainability</p>
-                </div>
-                <div class="subpage__sustaintime">
-                    Interest over time: £150.00
-                </div>
-                <div class="subpage__sustaindetails">
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Initial Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£4,500.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Date</label>
-                        <p class="subpage__sustaindetailsamount">21/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£600.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
-                        <p class="subpage__sustaindetailsamount">£60.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Start</label>
-                        <p class="subpage__sustaindetailsamount">30/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">End</label>
-                        <p class="subpage__sustaindetailsamount">25/03/2019</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <button class="subpage__sustainselectbutton">Select</button>
-                        <button class="subpage__sustaineditbutton">Edit</button>
-                    </div>
-                </div>
-            </div>
-            <div class="subpage__sustainlist sustain--active">
-                <div class="subpage__sustainhead">
-                    <span class="subpage__sustainnumber">2</span>
-                    <h6 class="subpage__sustainheading">Arrangement</h6>
-                    <p class="subpage__sustaindesc">80% sustainability</p>
-                </div>
-                <div class="subpage__sustaintime">
-                    Interest over time: £200.00
-                </div>
-                <div class="subpage__sustaindetails">
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Initial Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£3,000.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Date</label>
-                        <p class="subpage__sustaindetailsamount">21/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£500.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
-                        <p class="subpage__sustaindetailsamount">£50.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Start</label>
-                        <p class="subpage__sustaindetailsamount">30/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">End</label>
-                        <p class="subpage__sustaindetailsamount">25/09/2019</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <button class="subpage__sustainselectbutton">Selected</button>
-                        <button class="subpage__sustaineditbutton">Edit</button>
-                    </div>
-                </div>
-            </div>
-            <div class="subpage__sustainlist mar-rt--none">
-                <div class="subpage__sustainhead">
-                    <span class="subpage__sustainnumber">3</span>
-                    <h6 class="subpage__sustainheading">Arrangement</h6>
-                    <p class="subpage__sustaindesc">83% sustainability</p>
-                </div>
-                <div class="subpage__sustaintime">
-                    Interest over time: £250.00
-                </div>
-                <div class="subpage__sustaindetails">
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Initial Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£2,500.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Date</label>
-                        <p class="subpage__sustaindetailsamount">21/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Periodic Reduction</label>
-                        <p class="subpage__sustaindetailsamount">£400.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Period of (PCM)</label>
-                        <p class="subpage__sustaindetailsamount">£40.00</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">Start</label>
-                        <p class="subpage__sustaindetailsamount">30/06/2018</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <label class="subpage__sustaindetailslabel">End</label>
-                        <p class="subpage__sustaindetailsamount">25/12/2019</p>
-                    </div>
-                    <div class="subpage__sustaindetailsinner">
-                        <button class="subpage__sustainselectbutton">Select</button>
-                        <button class="subpage__sustaineditbutton">Edit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="subpage__sustainbuttons">
-            <button class="subpage__createarrangebutton" onclick="showhideblocks('createarrangement', 'arrangementinitial')">Create Arrangement</button>
-            <button class="subpage__previewschedulebutton">Preview Schedule</button>
-        </div>
+        <div class="clear--both"></div>
     </div>
 </div>
 <div id="createarrangement">

@@ -127,7 +127,7 @@ if (page && page !== "index.html" && page !== "dashboard.html") {
 	// document.getElementsByClassName("textNote")[2].removeAttribute("for");	
 	addRemoveClass("accountFirstHeading", "accountFirstPanel");
 	addRemoveClass("collectionHeading", "collectionPanel");
-	switchParentTab(0);
+	switchParentTab(3);
 }
 showhideblocks = function (showElementId, hideElementId) {
 	document.getElementById(showElementId).style.display = "block";

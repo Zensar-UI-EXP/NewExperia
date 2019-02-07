@@ -1,4 +1,4 @@
-<div class="IncomeExpenditure__">
+<div id="incomeExpenditureStep1" class="IncomeExpenditure__">
     <h1>
         Latest Income and Expenditure Report
         <span>Currently Editing</span>
@@ -655,6 +655,6 @@
             Cancel
         </button>
         <input type="submit" value="Save" class="btn btn--iesave">
-        <input type="submit" value="Complete" class="btn btn--iecomplete">
+        <input type="submit" value="Complete" onclick="showhideblocks('incomeExpenditureStep2', 'incomeExpenditureStep1')" class="btn btn--iecomplete">
     </div>
 </div>

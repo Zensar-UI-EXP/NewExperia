@@ -53,11 +53,21 @@
                 padding-right: 20px;
             }
         }
+        &arrangebox{
+            border: 1px solid #CCCCCC;	
+            border-radius: 4px;	
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.05);
+            margin-top: 75px;
+        }
+        &arrangeboxinner{
+            margin: 0 40px;
+        }
         &createarrange{
             float: left;
             margin: 35px 0 35px;
             width: 100%;
-            @include fontStyling($family: 'Roboto-Regular', $size: 22px!important, $color: $lightFontColor);
+            line-height: 24px;
+            @include fontStyling($family: 'Roboto-Regular', $size: 20px!important, $color: #000000);
         }
         &arrangeprogresscont{
             margin: 0 50px;
@@ -104,9 +114,13 @@
         }
         &arrangetaskinfo{
             position: absolute;
-            margin-left: -10px;
             left: 50%;
             top: -20px;
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 14px;	
+            font-weight: 500;	
+            line-height: 16px;
         }
         &arrangeform{
             float: left;
@@ -125,8 +139,9 @@
         }
         &arrangeformlist{
             float: left;
-            width: 60%;
+            width: 40%;
             margin-bottom: 10px;
+            position: relative;
         }
         &arrangeforminput{
             width: 50%;
@@ -154,7 +169,7 @@
             border-radius: 5px;
             border: none;
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
-            margin: 30px 0;
+            margin: 15px 0 20px;
             cursor: pointer;
             &:hover{
 				background: #004590;
@@ -405,12 +420,231 @@
         &arrangesetuplabel{
             float: left;
             line-height: 32px;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 14px;	
+            font-weight: 500;	
+            line-height: 16px;
         }
         &arrangesetuplist{
             float: left;
             width: 100%;
             margin-top: 5px;
+            .search__daylabel{
+                color: #333333;	
+                font-family: Roboto;	
+                font-size: 14px;	
+                line-height: 20px
+            }
+        }
+        &arrangeoverlabel{
+            position: absolute;
+            border-radius: 4px 0 0 4px;	
+            background-color: #F6F6F6;	
+            box-shadow: inset -1px 0 0 0 #DCDCDC;
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 16px;	
+            line-height: 42px;	
+            text-align: center;
+            width: 35px;
+            top: 38px;
+            left: 1px;
+        }
+        &arrangetype{
+            box-sizing: border-box;	
+            border: 1px solid #CCCCCC;	
+            background-color: #F6F6F6;
+            color: #6D2077;	
+            font-family: Roboto;	
+            font-size: 14px;	
+            font-weight: 500;	
+            line-height: 20px;
+            width: 100%;
+        }
+        &coheading{
+            color: #000000!important;	
+            font-family: Roboto;	
+            font-size: 20px;	
+            font-weight: 300!important;	
+            line-height: 24px;
+        }
+        &coindicator{
+            height: 32px;
+            width: 32px;
+            background-color: #CD0026;
+            float: right;
+            border-radius: 50%;
+            position: relative;
+        }
+        &colabel{
+            color: #3A3A3A;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 25px;
+            float: left;
+            width: 100%;
+        }
+        &covalue{
+            color: #3A3A3A;
+            font-family: Roboto;
+            font-size: 13px;
+            line-height: 20px;
+            float: left;
+            width: 100%;
+        }
+        &coinfo{
+            float: left;
+            padding: 15px 10px 15px 30px;
+            min-height: 75px;
+            position: relative;
+            width: 207px;
+        }
+        &colist{
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 15px;
+            border: 1px solid rgba(228,0,43,0.37);
+        }
+        &divider{
+            position: absolute;
+            height: 30px;
+            width: 1px;
+            background-color: #DCDCDC;
+            top: 50%;
+            right: 0;
+            margin-top: -15px;
+        }
+        &coicon{
+            background: url(../images/icon__co1.png) no-repeat 0 0 transparent;
+            float: left;
+            width: 20px;
+            height: 20px;
+            margin-left: -10px;
+            background-size: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -7px;
+        }
+        &rtbtcorner {
+            @include size($default-size, $default-size);
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+            background: #426DA9;
+            .subpage__rtbtcorinner {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                background: #ffffff;
+                border-radius: 50%;
+                top: 7px;
+                left: 7px;
+            }
+            &.progress--5 {
+                @include draw--progress(5, $progress-color);
+            }
+            &.progress--10 {
+                @include draw--progress(10, $progress-color);
+            }
+            &.progress--15 {
+                @include draw--progress(15, $progress-color);
+            }
+            &.progress--20 {
+                @include draw--progress(20, $progress-color);
+            }
+            &.progress--25 {
+                @include draw--progress(25, $progress-color);
+            }
+            &.progress--30 {
+                @include draw--progress(30, $progress-color);
+            }
+            &.progress--35 {
+                @include draw--progress(35, $progress-color);
+            }
+            &.progress--40 {
+                @include draw--progress(40, $progress-color);
+            }
+            &.progress--45 {
+                @include draw--progress(45, $progress-color);
+            }
+            &.progress--50 {
+                @include draw--progress(50, $progress-color);
+            }
+            &.progress--55 {
+                @include draw--progress(55, $progress-color);
+            }
+            &.progress--60 {
+                @include draw--progress(60, $progress-color);
+            }
+            &.progress--65 {
+                @include draw--progress(65, $progress-color);
+            }
+            &.progress--70 {
+                @include draw--progress(70, $progress-color);
+            }
+            &.progress--75 {
+                @include draw--progress(75, $progress-color);
+            }
+            &.progress--80 {
+                @include draw--progress(80, $progress-color);
+            }
+            &.progress--85 {
+                @include draw--progress(85, $progress-color);
+            }
+            &.progress--90 {
+                @include draw--progress(90, $progress-color);
+            }
+            &.progress--95 {
+                @include draw--progress(95, $progress-color);
+            }
+            &.progress--100 {
+                @include draw--progress(100, $progress-color);
+            }
+            .subpage__progress {
+                @include size(100%, 100%);
+                clip: rect(0, $default-size, $default-size, $default-size / 2);
+                left: 0;
+                position: absolute;
+                top: 0;
+                .half--circle {
+                    @include size(100%, 100%);
+                    border: ($default-size / 6) solid #426DA9;
+                    border-radius: 50%;
+                    clip: rect(0, $default-size / 2, $default-size, 0);
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+        }
+    }
+    &--{
+        &coaccinfo{
+            background-color: rgba(205,0,38,0.04);
+        }
+        &onebyfour{
+            width: 22%;
+            margin-right: 3.33%;
+            .subpage__{
+                &arrangeformlabel{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                &arrangeforminput{
+                    width: 100%;
+                    border: 1px solid #1D4F91;	
+                    border-radius: 4px;	
+                    background-color: #FFFFFF;
+                    color: #333333;	
+                    font-family: Roboto;	
+                    font-size: 16px;	
+                    line-height: 22px;
+                }
+            }
         }
     }
 }
@@ -426,7 +660,9 @@
             left: auto;
             right: 0;
             .subpage__arrangetaskinfo{
-                margin-left: -30px;
+                margin-left: 0;
+                left: auto;
+                right: -15px;
             }
         }
     }
@@ -584,7 +820,6 @@ eds-tag[motif='primary'] {
     background: #d2e7f7;
     color: #333333;
 }
-
 .cell--span-2 {
     display: inline-block;
     width: 99%;
@@ -592,55 +827,43 @@ eds-tag[motif='primary'] {
     text-align: left;
     font-weight: 500;
 }
-
 .arrears__data {
     display: block;
     font-weight: 400;
     font-size: 13px;
 }
-
 .txt--transform-none {
     text-transform: none;
 }
-
 .txt--normal {
     font-weight: 400;
 }
-
 .txt--display-inline {
     display: inline !important;
 }
-
 .labelsection__left {
     float: left;
 }
-
 .labelsection__right {
     float: right;
 }
-
 .mrg-left--10px {
     margin-left: 10px;
 }
-
 .mrg-left--40px {
     margin-left: 40px !important;
 }
-
 .mrg-top--30px {
     margin-top: 30px !important;
 }
-
 .borderradius--top-none {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-
 .borderradius--bottom-none {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
 .eds-accordion-add {
     position: absolute;
     right: 60px;
@@ -651,55 +874,45 @@ eds-tag[motif='primary'] {
     background-size: contain;
     background-image: url(../images/add.png);
 }
-
 .clr--blue {
     color: #0e6eb7;
 }
-
 .accountinfo__calendarcontainer {
     border: 1px solid #cccccc;
     border-radius: 6px;
     margin-top: 80px;
 }
-
 .accountinfo__calendartemplate {
     padding: 10px 40px;
 
 }
-
 .accountinfo__calendar {
   overflow: hidden;
 }
-
 .accountinfo__calendarview {
     overflow: hidden;
     padding: 10px 0;
 }
-
 .accountinfo__switchmonth {
     float: left;
     width: 5%;
     min-height: 253px;
     display: table;
 }
-
 .accountinfo__monthviews {
     float: left;
     width: 90%;
 }
-
 .accountinfo__monthviewsection {
     float: left;
     width: 50%;
 }
-
 .accountinfo__monthview {
     width: calc(100% - 20px - 1px);
     padding: 0 10px;
     overflow: hidden;
     margin: 0 auto;
-  }
-
+}
 .accountinfo__calendartitle {
   font-weight: 600;
   font-size: 13px;
@@ -708,13 +921,11 @@ eds-tag[motif='primary'] {
   text-align:center; 
   border-bottom: 1px solid #d6d6d6;
 }
-
 .accountinfo__calendarcells {
     overflow:hidden;
     padding-top: 10px;
     margin: 0 auto;
 }
-
 .accountinfo__calendarheader {
     font-weight: 500;
     font-size: 13px;
@@ -727,7 +938,6 @@ eds-tag[motif='primary'] {
     overflow:hidden; 
     line-height:30px;
 }
-
 .accountinfo__calendarcell{
     font-weight: 400;
     font-size: 13px;
@@ -740,7 +950,6 @@ eds-tag[motif='primary'] {
     line-height:30px;
     position: relative;
 }
-
 .circle--fill {
     width: 25px;
     height: 25px;
@@ -749,7 +958,6 @@ eds-tag[motif='primary'] {
     z-index: -1;
     background-color: transparent;
 }
-
 .circle--border {
     width: 25px;
     height: 25px;
@@ -757,7 +965,6 @@ eds-tag[motif='primary'] {
     border-radius: 50%;
     z-index: -1;
 }
-
 .circle--pos-center {
     position: absolute;
     margin-left: -12px;
@@ -765,7 +972,6 @@ eds-tag[motif='primary'] {
     left: 50%;
     top: 50%;
 }
-
 .smallcircle--fill {
     width: 15px;
     height: 15px;
@@ -775,7 +981,6 @@ eds-tag[motif='primary'] {
     display: inline-block;
     margin-top: 4px;
 }
-
 .smallcircle--border {
     width: 15px;
     height: 15px;
@@ -785,39 +990,30 @@ eds-tag[motif='primary'] {
     display: inline-block;
     margin-top: 4px;
 }
-
 .accountinfo__multipleevents {
     border-color: #6b2075;
 }
-
 .accountinfo__arrangement {
     background-color: #b7bd11;
 }
-
 .accountinfo__debit {
     background-color: #00b0a4;
 }
-
 .accountinfo__credit {
     background-color: #0082a6;
 }
-
 .accountinfo__call {
     background-color: #6b2075;
 }
-
 .accountinfo__communication {
     background-color: #e63987;
 }
-
 .accountinfo__userconfig1 {
     background-color: #ff8e1c;
 }
-
 .accountinfo__userconfig2 {
     background-color: #fcd700;
 }
-
 .accountinfo__today {
     background-color: #e1effa;
     width: 25px;
@@ -829,15 +1025,12 @@ eds-tag[motif='primary'] {
     top: 50%;
     z-index: -1;
 }
-
 .clr--white {
     color: #fff;
 }
-
 .clr--purple {
     color: #6b2075;
 }
-
 .devider {
     width: 1px;
     height: 200px;
@@ -845,39 +1038,33 @@ eds-tag[motif='primary'] {
     margin-top: 50px;
     float: left;
 }
-
 .accountinfo__legendsection {
     overflow: hidden;
     background-color: #f5f5f5;
     padding: 15px 0;
 }
-
 .accountinfo__calendarlegends {
     width: 85%;
     margin: 0 auto;
     overflow: hidden;
 }
-
 .accountinfo__calendarlegend {
     position: relative;
     float: left;
     width: 25%;
     margin: 4px 0;
 }
-
 .accountinfo__calendarlegendtext {
     margin-left: 25px;
     font-weight: 400;
     font-size: 13px;
 }
-
 .accountinfo__switchmonthlink {
     position: relative;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
-
 .eds-previous-caret {
     position: absolute;
     right: 0px;
@@ -889,7 +1076,6 @@ eds-tag[motif='primary'] {
     background-image: url(../images/left_arrow.png);
     margin-top: -10px;
 }
-
 .eds-next-caret {
     position: absolute;
     right: 0px;
@@ -901,36 +1087,23 @@ eds-tag[motif='primary'] {
     background-image: url(../images/right_arrow.png);
     margin-top: -10px;
 }
-
 .pcc-eds-timeline-item [slot="slot-header-center"] {
     font-size: 14px;
 }
-
 .timeline__day {
     color:#7a7a7a;
 }
-
 .timeline__details {
     font-weight: 400;
     
 }
-
 .scale2 {
     transform: scale(2);
     vertical-align: bottom;
 }
-
-/* eds-icon[icon*="keyboard_arrow"] {
-    color: #0e6eb7;
-    margin-left: 5px;
-} */
-
-
-
 pcc-eds-timeline-item [slot="slot-header-center"] [slot="slot-header-right"] {
     text-align: left !important;
 }
-
 pcc-eds-timeline-item .pagination {
     border-left: 1px solid #d8d8d8;
     margin-left: 53px;
@@ -938,23 +1111,19 @@ pcc-eds-timeline-item .pagination {
     padding-right: 30px;
     text-align: center;
 }
-
 pcc-eds-timeline-item .section-pagination {
     flex: 5;
     margin-left: 20px;
 }
-
 .paginate {
     display: inline-block;
     padding: 0;
     margin: 0;
     font-size: 14px;
 }
-
 .paginate__item {
     display: inline;
 }
-
 .paginate__link {
     font-weight: 700;
     float: left;
@@ -964,94 +1133,75 @@ pcc-eds-timeline-item .section-pagination {
     /* transition: background-color .3s; */
     /* border: 1px solid #ddd; */
 }
-
 .link--active {
     color: #333333 !important;
     border-bottom: 2px solid #af1685;
 }
-
 .link--disabled {
     color: #7a7a7a !important;
 }
-
 .margin0 {
     margin: 0 !important;
 }
-
 .margin-left--5px {
     margin-left: 5px;
 }
-
 .padding-left--0 {
     padding-left: 0;
 }
-
 .padding-right--0 {
     padding-right: 0;
 }
-
 .font--normal {
     font-weight: 400;
 }
-
 .pcc-eds-timeline-view {
     padding-bottom: 15px;
 }
-
 .pagination__container {
     display: flex;
     flex: 5;
     align-items: center;
 }
-
 .pagination__links {
     /* display: flex; */
     flex: 4;
 }
-
 .pagination__status {
     /* display: flex; */
     flex: 1;
     font-weight: normal;
 }
-
 .pcc-eds-timeline-view {
     padding-bottom: 15px !important;
 }
-
 .slot__datacontainer {
     background-color: #f5f5f5;
     padding: 20px 0;
 }
-
 .slot__datetemplate {
     overflow: hidden;
     padding: 0 30px;
 }
-
 .slot__datacontainer {
     overflow: hidden;
     background-color: #f5f5f5;
 }
-
 .slot__dataitem {
     float: left;
     width: 50%;
     padding: 0 20px;
 }
-
 .slot__dataheader {
     color: #af1685;
     margin-left: 5px;
 }
-
 .slot__datafield {
     margin-left: 5px;
     margin-top: 15px;
     font-weight: 500;
     font-size: 14px;
 }
-
 .slot__value {
     margin-left: 5px;
     padding: 2px 5px;
@@ -1068,11 +1218,9 @@ pcc-eds-timeline-item .section-pagination {
     margin-top: 5px;
     display: inline-block;
 }
-
 .brd-right--1px {
     border-right: 1px solid #d6d6d6;
 }
-
 .upload__document {
     background: url(../images/upload_document.png) 0 no-repeat;
     width: 20px;
@@ -1085,7 +1233,6 @@ pcc-eds-timeline-item .section-pagination {
     margin-top: -10px;
     margin-left: -7px;
 }
-
 .document {
     background: url(../images/document.png) 0 no-repeat;
     width: 20px;
@@ -1565,6 +1712,9 @@ pcc-eds-timeline-item .section-pagination {
             width: 10%;
         }
     }
+    &-auto{
+        width: auto!important;
+    }
 }
 .tbl--{
     &checkbox{
@@ -1617,6 +1767,15 @@ pcc-eds-timeline-item .section-pagination {
         position: relative;
         top: 3px;
     }
+    &arrcalendar{
+        background: url(../images/icon__arrcalendar.png) no-repeat 0 0 transparent;
+        width: 15px;
+        height: 15px;
+        background-size: 100%;
+        position: absolute;
+        top: 52px;
+        right: 10px;
+    }
     &ieinfo{
         background: url(../images/icon__IEInfo.png) no-repeat 0 0 transparent;
         width: 15px;
@@ -1664,6 +1823,20 @@ pcc-eds-timeline-item .section-pagination {
         &:before{
             display: none!important;
         }
+    }
+    &cohome{
+        background: url(../images/icon__co3.png) no-repeat 0 0 transparent;
+        background-size: 100%;
+        margin-top: -10px!important;
+    }
+    &cocar{
+        background: url(../images/icon__co2.png) no-repeat 0 0 transparent;
+        background-size: 100%;
+        margin-top: -10px!important;
+    }
+    &cocard{
+        background: url(../images/icon__co4.png) no-repeat 0 0 transparent;
+        background-size: 100%;
     }
 }
 .tbl--{
@@ -1756,6 +1929,43 @@ pcc-eds-timeline-item .section-pagination {
     &rt--{
         &15{
             padding-right: 15px!important;
+        }
+    }
+}
+.select{
+    width: 100%;
+    float: left;
+    height: 38px;
+    color: #333333;	
+    font-family: Roboto;	
+    font-size: 16px;	
+    line-height: 22px;
+}
+.ieoutcomecont{
+    border: 1px solid #CCCCCC;	
+    background-color: rgba(237,244,250,0.59);
+    margin-top: 35px;
+    &__{
+        &inner{
+            margin: 20px;
+        }
+        &label{
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 14px;	
+            font-weight: 500;	
+            line-height: 16px;
+        }
+        &select{
+            border: 1px solid #888888;	
+            border-radius: 4px;	
+            background-color: #FFFFFF;
+            width: 100%;
+            margin: 10px 0 20px;
+            height: 35px;
+        }
+        &btn{
+            width: 100%;
         }
     }
 }

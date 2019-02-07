@@ -35,34 +35,40 @@ $eds-error: #ffdce2;
 $eds-warning: #fceeba;
 $eds-success: #cdf4d2;
 $promise-pay-activity-tab: #912783;
+$progress-color: #cccccc;
+$default-size: 42px;
 
 //mixins
 @mixin padding-mixin($number) {
     padding: $number;
-  }
+}
   
-  @mixin fontWeight($weight) {
+@mixin fontWeight($weight) {
     font-weight: $weight;
-   }
-   @mixin addresses($width, $borderradius, $border){
-     width: $width;
-     border-radius: $borderradius;
-     border: $border;
-   }
-   @mixin fontStyling($family, $size, $color) {
+}
+@mixin addresses($width, $borderradius, $border){
+    width: $width;
+    border-radius: $borderradius;
+    border: $border;
+}
+@mixin fontStyling($family, $size, $color) {
     font-size: $size;
-  font-family: $family !important;
-  font-weight: normal !important;
-  color: $color;
-  }
+    font-family: $family !important;
+    font-weight: normal !important;
+    color: $color;
+}
 @mixin headerIcons($width, $height){
-width: $width;
-height: $height;
-float: left;
+    width: $width;
+    height: $height;
+    float: left;
 }
 @mixin coverImage($imgurl){
-  background: url($imgurl) no-repeat center center transparent; 
-  background-size: 100%;
+    background: url($imgurl) no-repeat center center transparent; 
+    background-size: 100%;
+}
+@mixin size($width, $height) {
+    height: $height;
+    width: $width;
 }
 .mar{
   &-tp{
@@ -116,5 +122,48 @@ float: left;
         text-align: right;
       }
     }
+  }
+}
+.pad-{
+  &lt--{
+    &0{
+      padding-left: 0!important;
+    }
+  }
+  &lt--{
+    &50{
+      padding-left: 50px!important;
+    }
+  }
+}
+@mixin draw--progress($progress, $color) {
+  .subpage__progress {
+    .half--circle {
+      border-color: $color;
+    }
+    .subpage {
+      &__ltsidecr {
+        transform: rotate($progress * 3.6deg);
+      }
+    }
+    @if $progress <= 50 {
+      .subpage {
+        &__rtsidecr {
+          display: none;
+        }
+      }
+    } @else {
+      clip: rect(auto, auto, auto, auto);
+      .subpage {
+        &__rtsidecr {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+.bg--{
+  &blue{
+    background: #436fa8!important;
   }
 }
