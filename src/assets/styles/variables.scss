@@ -75,10 +75,18 @@ $default-size: 42px;
     &--0{
       margin-top: 0!important;
     }
+    &--100{
+      margin-top: 100!important;
+    }
   }
   &-rt{
     &--none{
       margin-right: 0 !important;
+    }
+  }
+  &-bt{
+    &--25{
+      margin-bottom: 25px!important;
     }
   }
 }
@@ -133,6 +141,11 @@ $default-size: 42px;
   &lt--{
     &50{
       padding-left: 50px!important;
+    }
+  }
+  &tp--{
+    &10{
+      padding-top: 10px!important;
     }
   }
 }

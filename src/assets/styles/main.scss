@@ -58,6 +58,7 @@
             border-radius: 4px;	
             box-shadow: 0 0 5px 0 rgba(0,0,0,0.05);
             margin-top: 75px;
+            position: relative;
         }
         &arrangeboxinner{
             margin: 0 40px;
@@ -66,8 +67,11 @@
             float: left;
             margin: 35px 0 35px;
             width: 100%;
-            line-height: 24px;
-            @include fontStyling($family: 'Roboto-Regular', $size: 20px!important, $color: #000000);
+            color: #333333;	
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 25px;
         }
         &arrangeprogresscont{
             margin: 0 50px;
@@ -139,7 +143,7 @@
         }
         &arrangeformlist{
             float: left;
-            width: 40%;
+            width: 60%;
             margin-bottom: 10px;
             position: relative;
         }
@@ -199,22 +203,42 @@
             width: 100%;
             padding: 35px 0 30px;
             border-bottom: solid 1px #cccccc;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
+        }
+        &arrangetypedesc{
+            color: #555656;	
+            font-family: Roboto;	
+            font-size: 18px;	
+            font-weight: bold;	
+            line-height: 25px;
+            margin-top: 165px;
         }
         &sustainlist{
             float: left;
             width: 31%;
-            border: solid 1px #cccccc;
-            border-radius: 5px;
+            border: solid 1px #DCDCDC;
+            border-radius: 6px;
             overflow: hidden;
             margin-right: 3.5%;
             &:nth-child(last){
                 margin-right: 0;
             }
         }
+        &downarrow{
+            position: absolute;
+            left: 20px;
+            top: 16px;
+            width: 12px;
+            height: 8px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTJweCIgaGVpZ2h0PSI3cHgiIHZpZXdCb3g9IjAgMCAxMiA3IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA0OC4yICg0NzMyNykgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+R3JvdXAgMjwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTIzIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iR3JvdXAtMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi4wMDAwMDAsIDEuMDAwMDAwKSByb3RhdGUoLTQ1LjAwMDAwMCkgdHJhbnNsYXRlKC02LjAwMDAwMCwgLTEuMDAwMDAwKSB0cmFuc2xhdGUoMi4wMDAwMDAsIC0zLjAwMDAwMCkiIGZpbGw9IiMwRTZFQjciPgogICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLTIiIHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjgiIHJ4PSIxIj48L3JlY3Q+CiAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtMi1Db3B5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0LjAwMDAwMCwgNy4wMDAwMDApIHJvdGF0ZSg5MC4wMDAwMDApIHRyYW5zbGF0ZSgtNC4wMDAwMDAsIC03LjAwMDAwMCkgIiB4PSIzIiB5PSIzIiB3aWR0aD0iMiIgaGVpZ2h0PSI4IiByeD0iMSI+PC9yZWN0PgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+        
+        }
         &sustainhead{
             padding: 20px;
-            background: #f6f6f6;
+            background: #ffffff;
+            border-bottom: solid 1px #DCDCDC;
         }
         &sustainnumber{
             float: left;
@@ -224,9 +248,12 @@
             margin-top: 10px;
         }
         &sustainheading{
-            float: left;
-            width: 80%;
-            @include fontStyling($family: 'Roboto-Medium', $size: 16px!important, $color: #333333);
+            width: 100%;
+            color: #333333;	
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 22px;
         }
         &sustaindesc{
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #333333);
@@ -244,32 +271,45 @@
             width: 100%;
         }
         &sustaindetailsinner{
-            padding: 15px;
+            padding: 20px 15px 0;
         }
         &sustaindetailslabel{
-            @include fontStyling($family: 'Roboto-Medium', $size: 16px!important, $color: #666666);
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 13px;	
+            font-weight: 500;	
+            line-height: 15px;
             text-transform: uppercase;
             margin-bottom: 3px;
             float: left;
             width: 100%;
         }
         &sustaindetailsamount{
-            @include fontStyling($family: 'Roboto-Regular', $size: 16px!important, $color: #333333);
+            color: #333333;	
+            font-family: Roboto;	
+            font-size: 13px;	
+            line-height: 15px;
         }
         &sustainselectbutton{
-            background: #edf4fa;
             border-radius: 5px;
-            border: solid 1px #426da9;
-            padding: 5px 10px;
+            border: 1px solid #1D4F91;
+            border-radius: 4px;
+            background-color: #426DA9;
+            padding: 0 15px;
             float: right;
-            margin-bottom: 25px;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            margin-bottom: 15px;
+            color: #FFFFFF;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: center;
             margin-left: 15px;
             min-width: 80px;
             cursor: pointer;
             &:hover{
-				background: #004590;
-                color: #ffffff;
+				background: #edf4fa;
+                color: #426DA9;
 			}
         }
         &sustaineditbutton{
@@ -280,16 +320,29 @@
             padding: 5px 10px;
             cursor: pointer;
             &:hover{
-				color: #004590;
+				opacity: 0.7;
 			}
+        }
+        &sustainediticon{
+            background: url(../images/icon_arredit.png) no-repeat 0 0 transparent;
+            float: left;
+            width: 15px;
+            height: 16px;
+            margin-right: 5px;
+            background-size: 100%;
         }
         &previewschedulebutton{
             background: #edf4fa;
             border-radius: 5px;
             border: solid 1px #426da9;
-            padding: 5px 10px;
+            padding: 0 15px;
             float: right;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            color: #426DA9;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: center;
             cursor: pointer;
             &:hover{
 				background: #004590;
@@ -300,9 +353,14 @@
             background: #426da9;
             border-radius: 5px;
             border: solid 1px #426da9;
-            padding: 5px 10px;
+            padding: 0 15px;
             float: right;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
+            color: #FFFFFF;	
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: center;
             margin-left: 20px;
             cursor: pointer;
             &:hover{
@@ -311,46 +369,59 @@
 			}
         }
         &sustainbuttons{
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             float: left;
             width: 100%;
         }
         &arrangereviewcont{
             float: left;
             width: 100%;
-            margin-top: 100px;
+            margin-top: 35px;
         }
         &arrangereview{
             float: left;
             width: 50%;
             position: relative;
+            border: 1px solid #E63888;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0.05);
         }
         &arrangereviewhead{
-            text-transform: uppercase;
             padding: 15px;
-            @include fontStyling($family: 'Roboto-Medium', $size: 14px!important, $color: #000000);
+            color: #333333;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 15px;
         }
         &arrangereviewblock{
-            border-top: solid 1px #cccccc;
+            border-top: solid 1px #DCDCDC;
             padding: 10px 0;
             float: left;
             width: 100%;
         }
         &arrangereviewlist{
-            margin: 5px 0;
+            margin: 5px 0 0;
             float: left;
             width: 100%;
         }
         &arrangereviewlabel{
-            @include fontStyling($family: 'Roboto-Medium', $size: 12px!important, $color: #cccccc);
-            text-transform: uppercase;
+            color: #333333;	
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 26px;
             float: left;
             margin-left: 15px;
         }
         &arrangereviewvalue{
             float: right;
             margin-right: 15px;
-            @include fontStyling($family: 'Roboto-Regular', $size: 12px!important, $color: #000000);
+            color: #424242;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: right;
         }
         &arrangereviewoutline{
             position: absolute;
@@ -369,11 +440,17 @@
             background: #edf4fa;
             border-radius: 5px;
             border: solid 1px #426da9;
-            padding: 5px 10px;
+            padding: 0 10px;
             float: right;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #426da9);
+            color: #426DA9;	
+            font-family: Roboto;	
+            font-size: 14px;	
+            font-weight: 500;	
+            line-height: 32px;	
+            text-align: center;
             min-width: 150px;
             cursor: pointer;
+            margin: 10px 15px 10px 0;
             &:hover{
 				background: #004590;
                 color: #ffffff;
@@ -400,9 +477,7 @@
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
         }
         &sendarrangecol{
-            padding: 20px 10px;
-            border-top: solid 1px #cccccc;
-            border-bottom: solid 1px #cccccc;
+            padding: 20px 0px;
         }
         &arrangesetup{
             margin-top: 60px;
@@ -452,15 +527,22 @@
             left: 1px;
         }
         &arrangetype{
-            box-sizing: border-box;	
-            border: 1px solid #CCCCCC;	
+            box-sizing: border-box;
+            border: 1px solid #CCCCCC;
             background-color: #F6F6F6;
-            color: #6D2077;	
-            font-family: Roboto;	
-            font-size: 14px;	
-            font-weight: 500;	
+            color: #6D2077;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
             line-height: 20px;
             width: 100%;
+            position: absolute;
+            left: 0;
+            top: 190px;
+            padding: 10px 10px 10px 50px;
+            border-left: 0;
+            border-right: 0;
+            text-transform: uppercase;
         }
         &coheading{
             color: #000000!important;	
@@ -710,29 +792,21 @@
     &active{
         &.subpage__{
             &sustainlist{
-                border-color: #426da9;
+                border: 1px solid #E63888;
             }
         }
         .subpage__{
             &sustainhead{
-                background: #426da9;
-            }
-            &sustainnumber{
-                color: #ffffff!important;
-            }
-            &sustainheading{
-                color: #ffffff!important;
-            }
-            &sustaindesc{
-                color: #ffffff!important;
+                background: #fcf5f8;
             }
             &sustaintime{
                 border-color: #426da9;
                 font-family: 'Roboto-Medium'!important;
             }
             &sustainselectbutton{
-                background: #426da9;
-                color: #ffffff!important;
+                background: #e3e3e3;
+                color: #878787!important;
+                border-color: #cccccc!important;
             }
         }
     }
@@ -1756,6 +1830,26 @@ pcc-eds-timeline-item .section-pagination {
         background-size: 100%;
         position: relative;
         top: -5px;
+    }
+    &notes{
+        background: url(../images/icon_notespencil.png) no-repeat 0 0 transparent;
+        float: left;
+        width: 15px;
+        height: 16px;
+        margin-right: 10px;
+        background-size: 100%;
+        position: relative;
+        top: 3px;
+    }
+    &notescollapse{
+        background: url(../images/icon__notescaret.png) no-repeat 0 0 transparent;
+        float: left;
+        width: 15px;
+        height: 16px;
+        background-size: 100%;
+        position: relative;
+        top: 7px;
+        float: right;
     }
     &profile{
         background: url(../images/icon__ieprofile.png) no-repeat 0 0 transparent;

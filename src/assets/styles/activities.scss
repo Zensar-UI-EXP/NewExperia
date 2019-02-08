@@ -24,13 +24,14 @@
 }
 .notes-tab{
     margin-top: 385px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     .eds-accordion-label{
         background:  $eds-accordian-label-bg !important;
         color: $btn-color;
         .notes-icon{
             img{
                 vertical-align: bottom;
-                width:24px;
+                width: 24px;
                 height: 24px;
             }
         }
@@ -42,7 +43,7 @@
         resize: none;
      }
      .table{
-        padding: 10px;
+        padding: 15px 10px 20px;
         background:  $eds-accordian-label-bg !important;
      }
      .cell{
