@@ -5,12 +5,12 @@
                         Customer Overview
                 </a>
         </li>
-        <li role="presentation" class="style-scope eds-tabs pos--relative pad-rt--15">
-                <a id="tab-1" onclick="switchParentTab('1')" aria-controls="tab-panel-1" aria-selected="false" href="javascript:void(0);"
+        <li role="presentation" id="accountTab" class="style-scope eds-tabs pos--relative pad-rt--15">
+                <a id="tab-1" onclick="switchParentTab('1');switchaccarrtab('acc');" aria-controls="tab-panel-1" aria-selected="false" href="javascript:void(0);"
                         role="tab" class="style-scope eds-tabs accountsTab" aria-label="A One Zero Zero Zero Zero Five Six">
                         A1000056
                 </a>
-                <a id="closeCase" class="close--acctab" href="javascript:void(0);" title="Close Account View">
+                <a id="closeCase" onclick="showhideblocks('', 'accountTab')" class="close--acctab" href="javascript:void(0);" title="Close Account View">
                         <eds-icon icon="close" id="close-tab" class="close-button s12 eds cur--pointer" library="material-icon-font">
                                 <svg width="10px" height="8px" viewBox="0 0 10 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
@@ -30,12 +30,6 @@
                 <a id="tab-2" onclick="switchParentTab('2')" aria-controls="tab-panel-2" aria-selected="false" href="javascript:void(0);"
                         role="tab" class="style-scope eds-tabs accountsTab" aria-label="Income and Expenditure">
                         Income and Expenditure
-                </a>
-        </li>
-        <li role="presentation" class="style-scope eds-tabs">
-                <a id="tab-3" onclick="switchParentTab('3')" aria-controls="tab-panel-3" aria-selected="true" href="javascript:void(0);"
-                        role="tab" class="style-scope eds-tabs accountsTab" aria-label="Arrangement">
-                        Arrangement
                 </a>
         </li>
 </ul>

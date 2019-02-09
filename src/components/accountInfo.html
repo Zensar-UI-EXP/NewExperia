@@ -3,7 +3,9 @@
         ${require('./profileDetails.html')}
         ${require('./collectionInfo.html')}
         ${require('./arrearsinformation.html')}
-        ${require('./incomeExpenditureInfo.html')}
+        <div id="accoutiedetail">
+            ${require('./incomeExpenditureInfo.html')}
+        </div>
         ${require('./customerPreference.html')}
         ${require('./combineAuthorisedParties.html')}
     </div>
@@ -12,16 +14,21 @@
             <nav class="promisepay__navtab">
                 <ul class="promisepay__navtabcont">
                     <li class="promisepay__navtablist">
-                        <a class="promisepay__navtablink promisepay--navtablinkfirst promisepay--navtablinkactive" href="javascript:void(0);" title="Account">Account</a>
+                        <a id="acctab" onclick="switchaccarrtab('acc')" class="promisepay__navtablink promisepay--navtablinkfirst promisepay--navtablinkactive" href="javascript:void(0);" title="Account">Account</a>
                     </li>
                     <li class="promisepay__navtablist">
-                        <a class="promisepay__navtablink promisepay--navtablinklast" href="javascript:void(0);" title="Activity">Activity</a>
+                        <a id="arrtab" onclick="switchaccarrtab('arr')" class="promisepay__navtablink promisepay--navtablinklast" href="javascript:void(0);" title="Activity">Activity</a>
                     </li>
                 </ul>
             </nav>
         </div>
-        ${require('./accountCalendar.html')}
-        ${require('./accountReminder.html')}
+        <div id="accdetail">
+            ${require('./accountCalendar.html')}
+            ${require('./accountReminder.html')}
+        </div>
+        <div id="arrdetail">
+            ${require('./arrangementDetail.html')}
+        </div>
     </div>
     <div class="subpage__tabright containerSide" id="accountsActivity">
         ${require('./activites.html')}

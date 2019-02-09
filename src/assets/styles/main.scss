@@ -65,7 +65,7 @@
         }
         &createarrange{
             float: left;
-            margin: 35px 0 35px;
+            margin: 35px 0 25px;
             width: 100%;
             color: #333333;	
             font-family: Roboto;
@@ -460,10 +460,14 @@
             background: #426da9;
             border-radius: 5px;
             border: solid 1px #426da9;
-            padding: 5px 10px;
+            padding: 0 10px;
             float: right;
-            @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #ffffff);
-            min-width: 150px;
+            color: #FFFFFF;	
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 32px;
+            text-align: center;
             cursor: pointer;
             &:hover{
 				background: #004590;
@@ -472,12 +476,11 @@
         }
         &sendarrangetbl{
             width: 100%;
-            border-top: solid 1px #cccccc;
             border-bottom: solid 1px #cccccc;
             @include fontStyling($family: 'Roboto-Regular', $size: 14px!important, $color: #000000);
         }
         &sendarrangecol{
-            padding: 20px 0px;
+            padding: 0px 0px 20px;
         }
         &arrangesetup{
             margin-top: 60px;
@@ -494,23 +497,44 @@
         }
         &arrangesetuplabel{
             float: left;
-            line-height: 32px;
             color: #333333;	
-            font-family: Roboto;	
-            font-size: 14px;	
-            font-weight: 500;	
-            line-height: 16px;
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &sendarrcolvalue{
+            color: #000000;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 19px;
+        }
+        &sendarrcollabel{
+            color: #000000;	
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
         }
         &arrangesetuplist{
             float: left;
             width: 100%;
-            margin-top: 5px;
+            margin-bottom: 15px;
             .search__daylabel{
                 color: #333333;	
                 font-family: Roboto;	
                 font-size: 14px;	
                 line-height: 20px
             }
+        }
+        &createarrangehighbox{
+            border-radius: 6px;
+            background-color: #F6F6F6;
+            float: left;
+            width: 100%;
+        }
+        &createarrangehighinner{
+            margin: 20px;
         }
         &arrangeoverlabel{
             position: absolute;
@@ -865,7 +889,6 @@
     cursor: pointer;
     float: left;
     position: relative;
-    top: 5px;
     &:checked{
         position: relative;
         background: #47780c;
@@ -2062,4 +2085,13 @@ pcc-eds-timeline-item .section-pagination {
             width: 100%;
         }
     }
+}
+.arr--{
+    &checkbox{
+        float: left;
+        top: 15px;
+    }
+}
+#arrdetail, #accountTab, #incomeExpenditureStep2{
+    display: none;
 }

@@ -1,0 +1,111 @@
+<div id="arrangementinitial">
+    <div class="subpage__arrangebox">
+        <div class="subpage__arrangeboxinner">
+            <h5 class="subpage__createarrange">Create New Arrangement</h5>
+            <div class="subpage__arrangeprogresscont">
+                <div class="subpage__arrangeprogress">
+                    <div class="subpage__arrangeprogressline"> </div>
+                    <div class="subpage__arrangetask progress--active">
+                        <label class="subpage__arrangetaskinfo">Create</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                    <div class="subpage__arrangetask aln-at--middle">
+                        <label class="subpage__arrangetaskinfo">Review</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                    <div class="subpage__arrangetask aln-at--end">
+                        <label class="subpage__arrangetaskinfo">Complete</label>
+                        <span class="subpage__arrangetaskcircle"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clear--both"></div>
+            <div class="subpage__arrangeform">
+                <ul class="subpage__arrangeforminner">
+                    <li class="subpage__arrangeformlist">
+                        <label class="subpage__arrangeformlabel">Type of Arrangement</label>
+                    </li>
+                    <li>
+                        <eds-dropdown class="subpage__arrangeformselect eds pull--left">
+                            <label class="style-scope eds-dropdown">Reducing Balance</label>
+                            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                                <span class="eds-dropdown-value style-scope eds-dropdown">Reducing Balance</span>
+                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                            </div>
+                        </eds-dropdown>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Promise to Pay
+                            <input class="search__dayinput" type="radio" checked="checked" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Variable
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Monthly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Fortnightly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="subpage__arrangeformlist">
+                        <label class="search__daylabel">
+                            Weekly
+                            <input class="search__dayinput" type="radio" name="statsday" />
+                            <span class="search__daycheckmark"></span>
+                        </label>
+                    </li>
+                    <li class="clear"></li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Amount of Arrears</label>
+                        <span class="subpage__arrangeoverlabel">£</span>
+                        <input class="subpage__arrangeforminput pad-lt--50" type="text" value="6,100.00" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Agreed Final Balance</label>
+                        <span class="subpage__arrangeoverlabel">£</span>
+                        <input class="subpage__arrangeforminput pad-lt--50" type="text" value="440.00" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour">
+                        <label class="subpage__arrangeformlabel">Agreed Start Balance</label>
+                        <i class="icon--arrcalendar"></i>
+                        <input class="subpage__arrangeforminput" type="text" value="Dec 16, 2019" />
+                    </li>
+                    <li class="subpage__arrangeformlist subpage--onebyfour mar-rt--none">
+                        <label class="subpage__arrangeformlabel">Agreed Start Balance</label>
+                        <eds-dropdown class="subpage__arrangeformselect eds pull--left">
+                            <label class="style-scope eds-dropdown">6</label>
+                            <div class="eds-dropdown-trigger style-scope eds-dropdown" tabindex="-1">
+                                <span class="eds-dropdown-value style-scope eds-dropdown">6</span>
+                                <span class="eds-dropdown-placeholder style-scope eds-dropdown"></span>
+                                <span class="eds-dropdown-arrow style-scope eds-dropdown"></span>
+                            </div>
+                        </eds-dropdown>
+                    </li>
+                    <li class="subpage__arrangeformlist wdh-per--100">
+                        <hr/>
+                    </li>
+                    <li class="subpage__arrangeformlist wdh-per--100">
+                        <button class="subpage__arrangeformbuton" onclick="showhideblocks('generatearrangement', 'arrangementinitial')">Generate Agreement</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear--both"></div>
+        </div>
+    </div>
+</div>    

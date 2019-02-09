@@ -1,13 +1,22 @@
-switchTab = function (documentId, selectedTabClassName, thisParam) {
-	let idElement = document.getElementById(documentId);
-	let classElement = document.getElementsByClassName(selectedTabClassName);
-	let activeTabElement = document.getElementsByClassName("promisepay--navtablinkactive");
-	activeTabElement[0].setAttribute("aria-selected", false);
-	activeTabElement[0].classList.remove("promisepay--navtablinkactive");
-	thisParam.classList.add("promisepay--navtablinkactive");
-	thisParam.setAttribute("aria-selected", true);
-	classElement[0].classList.remove(selectedTabClassName);
-	idElement.classList.add(selectedTabClassName);
+switchSideTab = function (tabClassName) {
+	let hideelements = document.getElementsByClassName('sidetab');
+	for (ele of hideelements) {
+		if (ele.className.indexOf(tabClassName) > -1) {
+			ele.setAttribute("active", true);
+			ele.style.display = "block";
+		} else {
+			ele.removeAttribute("active");
+			ele.style.display = "none";
+		}
+	}
+	let tabnavElements = document.getElementsByClassName('sidetabnav');
+	for (ele of tabnavElements) {
+		if (ele.className.indexOf(tabClassName) > -1) {
+			ele.setAttribute("aria-selected", true);
+		} else {
+			ele.setAttribute("aria-selected", false);
+		}
+	}
 }
 
 switchParentTab = function (tabId, focusOnNotes) {
@@ -127,9 +136,45 @@ if (page && page !== "index.html" && page !== "dashboard.html") {
 	// document.getElementsByClassName("textNote")[2].removeAttribute("for");	
 	addRemoveClass("accountFirstHeading", "accountFirstPanel");
 	addRemoveClass("collectionHeading", "collectionPanel");
-	switchParentTab(3);
+	switchParentTab(0);
 }
-showhideblocks = function (showElementId, hideElementId) {
-	document.getElementById(showElementId).style.display = "block";
+
+showhideblocks = function (showElementId = null, hideElementId) {
+	if (showElementId) document.getElementById(showElementId).style.display = showElementId === "accountTab" ? "inline-block" : "block";
 	if (hideElementId) document.getElementById(hideElementId).style.display = "none";
+	if (showElementId === "accountTab") switchParentTab('1');
+	if (hideElementId === "accountTab") switchParentTab('0');
+}
+
+switchaccarrtab = function (tabparam) {
+	document.getElementById('arrdetail').style.display = tabparam === 'arr' ? "block" : "none";
+	document.getElementById('accoutiedetail').style.display = tabparam === 'arr' ? "none" : "block";
+	document.getElementById('accdetail').style.display = tabparam === 'arr' ? "none" : "block";
+	var updateClassName = document.querySelector('.promisepay--navtablinkactive').className.replace('promisepay--navtablinkactive', '');
+	document.querySelector('.promisepay--navtablinkactive').className = updateClassName;
+	document.getElementById(tabparam + 'tab').className = document.getElementById(tabparam + 'tab').className + ' promisepay--navtablinkactive';
+	if (tabparam === 'arr') {
+		document.getElementById('arrangementinitial').style.display = "block";
+		document.getElementById('generatearrangement').style.display = "none";
+		document.getElementById('createarrangement').style.display = "none";
+		document.getElementById('completearrangement').style.display = "none";
+		let arrLinks = document.getElementsByClassName('arrangementlink');
+		for (link of arrLinks) {
+			link.className += 'active';
+		}
+	} else {
+		let arrLinks = document.getElementsByClassName('arrangementlink');
+		for (link of arrLinks) {
+			link.className = 'style-scope arrangementlink eds-tabs';
+		}
+	}
+}
+
+gotoArr = function () {
+	let arrLinks = document.getElementsByClassName('arrangementlink');
+	for (link of arrLinks) {
+		if (link.className.indexOf('active') > -1) link.className += 'active';
+	}
+	showhideblocks('accountTab');
+	switchaccarrtab('arr');
 }

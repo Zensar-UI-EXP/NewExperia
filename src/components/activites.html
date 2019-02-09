@@ -1,17 +1,17 @@
 <eds-tabs background="gray" class="eds" role="complementary">
     <ul class="tab-labels style-scope eds-tabs" role="tablist">
         <li role="presentation" class="style-scope eds-tabs">
-            <a href="javascript:void(0);" id="tab-alerts" aria-selected="true" role="tab" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" onclick="switchSideTab('alertsTab')" id="tab-alerts" aria-selected="true" role="tab" class="style-scope eds-tabs alertsTabnav sidetabnav">
                 Alerts
             </a>
         </li>
         <li role="presentation" class="style-scope eds-tabs">
-            <a href="javascript:void(0);" id="tab-activities" aria-selected="false" role="tab" class="style-scope eds-tabs">
+            <a href="javascript:void(0);" onclick="switchSideTab('activitiesTab')" id="tab-activities" aria-selected="false" role="tab" class="style-scope eds-tabs activitiesTabnav sidetabnav">
                 Activities
             </a>
         </li>
     </ul>
-    <eds-tab label="Activities" class="eds" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5" role="tabpanel">
+    <eds-tab label="Activities" class="eds activitiesTab sidetab" aria-hidden="true" id="tab-panel-5" aria-labelledby="tab-5" role="tabpanel">
         <ul class="style-scope eds-tabs activity-tabs">
             <li role="presentation" class="style-scope eds-tabs promisepay__link">
                 <a aria-selected="false" aria-controls="tab-panel-3" href="javascript:void(0);" role="tab" class="style-scope eds-tabs">
@@ -33,8 +33,8 @@
                     </li>
                 </ul>
             </li>
-            <li role="presentation" class="style-scope eds-tabs">
-                <a aria-controls="Move to Arrangement" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Create New Arrangement</a>
+            <li onclick="gotoArr()" role="presentation" class="style-scope arrangementlink eds-tabs">
+                <a aria-controls="Create New Arrangement" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links cur--pointer" tabindex="0">Create New Arrangement</a>
             </li>
             <li role="presentation" class="style-scope eds-tabs">
                 <a aria-controls="Product Request" aria-selected="false" href="javascript:void(0);" role="tab" class="style-scope eds-tabs cur--auto memo__links" tabindex="0">Product Request <span class="eds-accordion-caret"></span></a>
@@ -47,7 +47,7 @@
             </li>
         </ul>
     </eds-tab>
-    <eds-tab label="Alerts" class="eds" active="true" aria-hidden="false" id="tab-panel-4" aria-labelledby="tab-4" role="tabpanel">
+    <eds-tab label="Alerts" class="eds alertsTab sidetab" active="true" aria-hidden="false" id="tab-panel-4" aria-labelledby="tab-4" role="tabpanel">
         <div class="subpage__alertinfo">
             <div class="subpage__alertleft">
                 <i class="subpage__alerticon"></i>

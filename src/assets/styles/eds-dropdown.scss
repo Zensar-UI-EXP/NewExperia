@@ -84,7 +84,7 @@ eds-dropdown {
 			transition: opacity 0.15s ease;
 		}
 		&:focus {
-			outline: -webkit-focus-ring-color auto 5px;
+			// outline: -webkit-focus-ring-color auto 5px;
 			&::after {
 				opacity: 1;
 				transition: opacity 0.15s ease;
