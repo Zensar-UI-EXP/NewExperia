@@ -1,6 +1,36 @@
 @import "../styles/variables.scss";
+.progress--{
+    &cont{
+        &:hover .subpage__hovercont{
+            display: block;
+        }
+    }
+}
 .subpage{
     &__{
+        &hovercont{
+            border-radius: 6px;
+            color: #ffffff;
+            background: #333333;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: -110px;
+            width: 150px;
+            text-align: center;
+            z-index: 1;
+            display: none;
+            &:after{
+                position: absolute;
+                border-top: solid 7px #333333;
+                border-left: solid 7px transparent;
+                border-right: solid 7px transparent;
+                bottom: -7px;
+                right: 7px;
+                margin-left: -3.5px;
+                content: "";
+            }
+        }
         &alertinfo{
             margin: 10px 15px 0;
             min-height: 70px;
@@ -220,6 +250,7 @@
             border-radius: 6px;
             overflow: hidden;
             margin-right: 3.5%;
+            cursor: pointer;
             &:nth-child(last){
                 margin-right: 0;
             }
@@ -363,6 +394,20 @@
             text-align: center;
             margin-left: 20px;
             cursor: pointer;
+            &:disabled{
+                background: #edf4fa;
+                border-radius: 5px;
+                border: solid 1px #426da9;
+                padding: 0 15px;
+                float: right;
+                color: #426DA9;
+                font-family: Roboto;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 32px;
+                text-align: center;
+                cursor: auto;
+            }
             &:hover{
 				background: #004590;
                 color: #ffffff;
@@ -988,7 +1033,7 @@ eds-tag[motif='primary'] {
 }
 .accountinfo__calendarview {
     overflow: hidden;
-    padding: 10px 0;
+    padding: 0;
 }
 .accountinfo__switchmonth {
     float: left;
@@ -1006,7 +1051,7 @@ eds-tag[motif='primary'] {
 }
 .accountinfo__monthview {
     width: calc(100% - 20px - 1px);
-    padding: 0 10px;
+    padding: 35px 10px 10px;
     overflow: hidden;
     margin: 0 auto;
 }
@@ -1019,7 +1064,6 @@ eds-tag[motif='primary'] {
   border-bottom: 1px solid #d6d6d6;
 }
 .accountinfo__calendarcells {
-    overflow:hidden;
     padding-top: 10px;
     margin: 0 auto;
 }
@@ -1043,7 +1087,6 @@ eds-tag[motif='primary'] {
     height:30px; 
     display:inline-block; 
     float:left; 
-    overflow:hidden; 
     line-height:30px;
     position: relative;
 }
@@ -1121,6 +1164,7 @@ eds-tag[motif='primary'] {
     left: 50%;
     top: 50%;
     z-index: -1;
+    border-radius: 50%;
 }
 .clr--white {
     color: #fff;
@@ -1713,6 +1757,7 @@ pcc-eds-timeline-item .section-pagination {
     float: right;
     width: 20%;
     margin-top: 165px;
+    position: relative;
     h3{
         color: #000000;	
         font-family: Roboto;	
@@ -1739,6 +1784,8 @@ pcc-eds-timeline-item .section-pagination {
     }
     &inner{
         margin: 0 2em;
+        position: absolute;
+        top: 0;
     }
     &btn{
         padding: 8px 28px;
@@ -2094,4 +2141,77 @@ pcc-eds-timeline-item .section-pagination {
 }
 #arrdetail, #accountTab, #incomeExpenditureStep2{
     display: none;
+}
+.accountinfo{
+    &__{
+        &hovercont{
+            background: #ffffff;
+            border-radius: 6px;
+            position: absolute;
+            width: 210px;
+            padding: 10px 10px;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+            z-index: 1;
+            left: -52px;
+            bottom: 37px;
+            border: solid 1px #cccccc;
+            display: none;
+            &::after{
+                position: absolute;
+                border-top: solid 7px #ffffff;
+                border-left: solid 7px transparent;
+                border-right: solid 7px transparent;
+                content: "";
+                left: 67px;
+                bottom: -6px;
+            }
+            &::before{
+                position: absolute;
+                border-top: solid 7px #cccccc;
+                border-left: solid 7px transparent;
+                border-right: solid 7px transparent;
+                content: "";
+                left: 67px;
+                bottom: -7px;
+            }
+        }
+        &hoverheading{
+            font-size: 14px!important;
+            float: left;
+            width: 100%;
+            text-align: left;
+        }
+        &hoverlistcont{
+            float: left;
+            width: 100%;
+        }
+        &hoverlist{
+            float: left;
+            width: 100%;;
+        }
+        &hoverlistvalue{
+            float: left;
+        }
+        &hoverliststatus{
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin: 9px 5px;
+            background: #b7bd11;
+            border-radius: 50%;
+        }
+    }
+}
+.bg--{
+    &calls{
+        background: #6b2075;
+    }
+    &credits{
+        background: #0082a6;
+    }
+}
+.accountinfo__calendarcell:hover{
+    .accountinfo__hovercont{
+        display: block;
+    }
 }

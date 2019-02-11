@@ -6,21 +6,20 @@
         </h1>
         <h1>
             <i class="icon--totalincome"></i>
-            Total Income - <b>£1,930.00</b>
+            Total Income - <b id="totalIncome">£0.00</b>
         </h1>
         <div class="accordion">
             <ul>
                 <li>
                     <input type="checkbox">
                     <i></i>
-                    <h2>Income - <span>£1,930.00</span></h2>
+                    <h2>Income - <span id="corresIncome">£0.00</span></h2>
                     <div>
-                        <table class="tbl tbl--innerborder">
+                        <table id="incomeTable" class="tbl tbl--innerborder">
                             <thead>
                                 <tr>
                                     <th class="wdh-per--48" width="48%"></th>
                                     <th class="wdh-per--15" width="15%">Amount (GBP)</th>
-                                    
                                     <th class="wdh-per--15 txt-aln--left">How often?</th>
                                     <th class="wdh-per--15" >Average/Month (GBP)</th>
                                 </tr>
@@ -28,226 +27,257 @@
                             <tr>
                                 <td>Your Wage</td>
                                 <td>
-                                    <input type="number" value="1350" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="1350" placeholder="0.00" />
                                 </td>
-                                
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option selected="selected">month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">1,350.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Your Partners Wage</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Part-time Wages</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Child Benefit</td>
                                 <td>
-                                    <input type="number" value="500" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="500" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option selected="selected">month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Rent or Board Received</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>State Pension</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Private Pensions</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Pension Credit</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Employment and Support Allowance (ESA)</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Jobseeker’s Allowance (JSA)</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Child Support or CSA</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Disability Livining Allowance (DLA)</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Income Support</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Working Tax Credit</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Child Tax Credit</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Housing Benefit</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresIncome', 'totalIncome')" class="incometableinput" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select class="incometableselect" onchange="calculte(this, 'corresIncome', 'totalIncome')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                         </table>
                     </div>
@@ -255,7 +285,7 @@
             </ul>
             <h1>
                 <i class="icon--totalexpenditure"></i>
-                Total Expenditure - <b>£1,100.00</b>
+                Total Expenditure - <b id="totalExpendi">£0.00</b>
             </h1>
             <div class="IncomeExpenditure__withswitch">
                 <h3 class="IncomeExpenditure__livingcost">Living Costs</h3>
@@ -271,7 +301,7 @@
                 <li>
                     <input type="checkbox">
                     <i></i>
-                    <h2>Housing and Utility Bills - <span>£900.00</span></h2>
+                    <h2>Housing and Utility Bills - <span id="corresExpendi">£0.00</span></h2>
                     <div>
                         <table class="tbl tbl--innerborder">
                             <thead>
@@ -286,156 +316,178 @@
                             <tr>
                                 <td>Rent</td>
                                 <td>
-                                    <input type="number" value="900" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="900" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option selected="selected">month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Mortgage</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Secured Loan (other than your mortgage)</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Mortgage Endowment Premium</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Service Charge or Ground Rent</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Water</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Council Tax</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Child Tax Credit</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Gas</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Electricity</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                             <tr>
                                 <td>Other Household Fuels (oil, coal etc)</td>
                                 <td>
-                                    <input type="number" value="" placeholder="0.00" />
+                                    <input onblur="calculte(this, 'corresExpendi', 'totalExpendi')" type="number" value="" placeholder="0.00" />
                                 </td>
                                 
                                 <td class="txt-aln--left bor-lt--none">
-                                    <select>
+                                    <select onchange="calculte(this, 'corresExpendi', 'totalExpendi')">
                                         <option>select</option>
                                         <option>month</option>
+                                        <option>bi-weekly</option>
+                                        <option>weekly</option>
                                     </select>
                                 </td>
-                                <td class="highlight--avgrow">£580.00</td>
+                                <td class="highlight--avgrow">£0.00</td>
                             </tr>
                         </table>
                     </div>
@@ -630,7 +682,7 @@
     </div>
 
     <div class="ieaside__">
-        <div class="ieaside__inner">
+        <div class="ieaside__inner ie--setp1">
             <h3>Overview -  Per Month</h3>
             <table>
                 <tr>

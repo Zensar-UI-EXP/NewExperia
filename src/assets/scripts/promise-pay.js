@@ -171,10 +171,66 @@ switchaccarrtab = function (tabparam) {
 }
 
 gotoArr = function () {
-	let arrLinks = document.getElementsByClassName('arrangementlink');
-	for (link of arrLinks) {
-		if (link.className.indexOf('active') > -1) link.className += 'active';
+	let selectorValue = document.querySelector('.ieoutcomecont__select').value;
+	if (selectorValue === 'New Arrangement') {
+		let arrLinks = document.getElementsByClassName('arrangementlink');
+		for (link of arrLinks) {
+			if (link.className.indexOf('active') > -1) link.className += 'active';
+		}
+		showhideblocks('accountTab');
+		switchaccarrtab('arr');
 	}
-	showhideblocks('accountTab');
-	switchaccarrtab('arr');
+}
+
+calculte = (thisparam, corresElement, totalElement) => {
+	let childrenElements = thisparam.parentElement.parentElement.children;
+	let inputValue = childrenElements[1].children[0].value || 0;
+	let selectValue;
+	if (childrenElements[2].children[0].value === 'select') {
+		selectValue = 0;
+	} else if (childrenElements[2].children[0].value === 'month') {
+		selectValue = 1;
+	} else if (childrenElements[2].children[0].value === 'bi-weekly') {
+		selectValue = 2;
+	} else if (childrenElements[2].children[0].value === 'weekly') {
+		selectValue = 4;
+	}
+	let calcultedAvgValue = inputValue * selectValue;
+	childrenElements[3].innerHTML = '£' + calcultedAvgValue.toFixed(2);
+	let childrenRowElements = thisparam.parentElement.parentElement.parentElement.children;
+	let sumOfAllRows = 0;
+	for (element of childrenRowElements) {
+		childrenElements[3].innerHTML = '£' + calcultedAvgValue.toFixed(2);
+		let addingValue = element.children[3].innerHTML.replace('£', '')
+		sumOfAllRows += parseInt(addingValue);
+	}
+	document.getElementById(corresElement).innerHTML = '£' + sumOfAllRows.toFixed(2);
+	let childrenCorresElement = thisparam.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children;
+	console.log(childrenCorresElement);
+	setTimeout(function(){
+		let sumOfAllCorres = 0;
+		for (corresElement of childrenCorresElement) {
+			let addingCorres = corresElement.children[2].children[0].innerHTML.replace('£', '')
+			sumOfAllCorres += parseInt(addingCorres);
+		}
+		document.getElementById(totalElement).innerHTML = '£' + sumOfAllCorres.toFixed(2);
+	}, 1);
+}
+
+selectArrangement = function (thisparam) {
+	let activeElement = document.querySelector('.sustain--active');
+	if (activeElement) activeElement.className = activeElement.className.replace('sustain--active', '');
+	thisparam.className += ' sustain--active';
+	document.querySelector('.subpage__createarrangebutton').removeAttribute('disabled');
+}
+
+window.onscroll = function(){
+	let ieElement1 = document.getElementById('incomeExpenditureStep1');
+	let ieElement2 = document.getElementById('incomeExpenditureStep2');
+	let scrollposition = window.pageYOffset <= 340 ? 0 : window.pageYOffset - 320;
+	if (ieElement1.offsetWidth) {
+		document.querySelector('.ie--setp1').style.top = scrollposition + 'px';
+	} else if (ieElement2.offsetWidth) {
+		document.querySelector('.ie--setp2').style.top = scrollposition + 'px';
+	}
 }
