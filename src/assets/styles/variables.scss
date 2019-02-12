@@ -183,7 +183,10 @@ $default-size: 42px;
 .bor-{
   &col--{
     &red{
-      border-color: #ff0000;
+      border-color: rgba(228,0,43,0.37);
+      .subpage--coaccinfo{
+        background-color: rgba(205,0,38,0.04)
+      }
     }
   }
 }

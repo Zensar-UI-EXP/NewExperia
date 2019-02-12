@@ -52,10 +52,11 @@ switchParentTab = function (tabId, focusOnNotes) {
 			element.setAttribute("tabindex", "-1");
 		}
 	}
-	tabElement.setAttribute("aria-selected", true);
-	panelElement.setAttribute("active", true);
-	panelElement.setAttribute("aria-hidden", false);
-	panelElement.setAttribute("tabindex", "0");
+	
+	if (tabElement) tabElement.setAttribute("aria-selected", true);
+	if (panelElement) panelElement.setAttribute("active", true);
+	if (panelElement) panelElement.setAttribute("aria-hidden", false);
+	if (panelElement) panelElement.setAttribute("tabindex", "0");
 	calculateHeightContainer();
 	// if (tabId == 3) {
 	// 	document.getElementById("promiseActivity").click();
@@ -147,10 +148,12 @@ const page = path.split("/").pop();
 if (page && page !== "index.html" && page !== "dashboard.html") {
 	// document.getElementsByClassName("textNote")[1].removeAttribute("for");
 	// document.getElementsByClassName("textNote")[2].removeAttribute("for");	
-	addRemoveClass("accountFirstHeading", "accountFirstPanel");
-	addRemoveClass("collectionHeading", "collectionPanel");
-	switchParentTab(0);
-	calculateHeightContainer();
+	// addRemoveClass("accountFirstHeading", "accountFirstPanel");
+	// addRemoveClass("collectionHeading", "collectionPanel");
+	setTimeout(function(){
+		switchParentTab(0);
+		calculateHeightContainer();
+	}, 100);
 }
 
 showhideblocks = function (showElementId = null, hideElementId) {

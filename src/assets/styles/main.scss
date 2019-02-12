@@ -656,7 +656,7 @@
             border-radius: 4px;
             overflow: hidden;
             margin-top: 15px;
-            border: 1px solid rgba(228,0,43,0.37);
+            border: 1px solid #CCCCCC;
         }
         &divider{
             position: absolute;
@@ -775,7 +775,7 @@
     }
     &--{
         &coaccinfo{
-            background-color: rgba(205,0,38,0.04);
+            background-color: #f5f8fa;
         }
         &onebyfour{
             width: 22%;

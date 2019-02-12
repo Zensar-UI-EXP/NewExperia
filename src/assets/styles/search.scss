@@ -96,7 +96,7 @@
 		left: 50%;
 		margin-left: -60%;
 		bottom: 0;
-		@include fontStyling($family: 'Roboto-Regular', $size: 16px, $color: #426da9);
+		@include fontStyling($family: 'Roboto-Regular', $size: 14px, $color: #6D2077);
 	}
 	&__targeticon{
 		width: 16px;
@@ -165,6 +165,14 @@
 			background: #426da9;
 			margin-left: -5px;
 			margin-top: -5px;
+		}
+	}
+	&__list {
+		float: left;
+		position: relative;
+		.icon--arrcalendar{
+			top: 7px;
+    		right: 17px;
 		}
 	}
 }
