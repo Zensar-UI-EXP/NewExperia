@@ -43,6 +43,7 @@ $background_color_2: rgb(245, 245, 245);
 	&:last-child {
 		background-color: $whiteLightColor;
 		padding:10px 0;
+		position: relative;
 	}
 	&:first-child {
 		padding-top: 15px;

@@ -23,8 +23,10 @@
     }
 }
 .notes-tab{
-    margin-top: 385px;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     .eds-accordion-label{
         background:  $eds-accordian-label-bg !important;
         color: $btn-color;
@@ -41,18 +43,18 @@
     }
     textarea {
         resize: none;
-     }
-     .table{
+    }
+    .table{
         padding: 15px 10px 20px;
         background:  $eds-accordian-label-bg !important;
-     }
-     .cell{
-         font-size: 12px;
-     }
-     .eds-icon{
-         vertical-align: bottom;
-     }
-     .note-btn{
+    }
+    .cell{
+        font-size: 12px;
+    }
+    .eds-icon{
+        vertical-align: bottom;
+    }
+    .note-btn{
         border: none;
         padding: 10px 25px !important;
         background: $btn-color !important;
@@ -60,12 +62,12 @@
         color:#fff !important;
         text-transform: capitalize;
         font-size: 14px;
-     }
-     .row {
+    }
+    .row {
         padding: 0 10px;
         > .cell{
-        vertical-align: middle;
-     }
+            vertical-align: middle;
+        }
     }
 }
 .memo-tab{

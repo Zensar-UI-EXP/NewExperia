@@ -180,3 +180,10 @@ $default-size: 42px;
     background: #436fa8!important;
   }
 }
+.bor-{
+  &col--{
+    &red{
+      border-color: #ff0000;
+    }
+  }
+}
