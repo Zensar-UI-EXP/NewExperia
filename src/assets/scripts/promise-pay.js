@@ -1,3 +1,14 @@
+calculateHeightContainer = function () {
+	let rightsideElements = document.getElementsByClassName('subpage__tabright');
+	if (rightsideElements && rightsideElements.length) {
+		for (rightElement of rightsideElements) {
+			if (rightElement.parentElement.offsetHeight) {
+				rightElement.style.height = rightElement.parentElement.offsetHeight + 'px';
+			}
+		}
+	}
+}
+
 switchSideTab = function (tabClassName) {
 	let hideelements = document.getElementsByClassName('sidetab');
 	for (ele of hideelements) {
@@ -17,6 +28,7 @@ switchSideTab = function (tabClassName) {
 			ele.setAttribute("aria-selected", false);
 		}
 	}
+	calculateHeightContainer();
 }
 
 switchParentTab = function (tabId, focusOnNotes) {
@@ -44,6 +56,7 @@ switchParentTab = function (tabId, focusOnNotes) {
 	panelElement.setAttribute("active", true);
 	panelElement.setAttribute("aria-hidden", false);
 	panelElement.setAttribute("tabindex", "0");
+	calculateHeightContainer();
 	// if (tabId == 3) {
 	// 	document.getElementById("promiseActivity").click();
 	// 	document.getElementById("promise__actsection").children[0].children[1].children[0].classList.add("promisepay--linkactive");
@@ -137,6 +150,7 @@ if (page && page !== "index.html" && page !== "dashboard.html") {
 	addRemoveClass("accountFirstHeading", "accountFirstPanel");
 	addRemoveClass("collectionHeading", "collectionPanel");
 	switchParentTab(0);
+	calculateHeightContainer();
 }
 
 showhideblocks = function (showElementId = null, hideElementId) {
@@ -144,6 +158,7 @@ showhideblocks = function (showElementId = null, hideElementId) {
 	if (hideElementId) document.getElementById(hideElementId).style.display = "none";
 	if (showElementId === "accountTab") switchParentTab('1');
 	if (hideElementId === "accountTab") switchParentTab('0');
+	calculateHeightContainer();
 }
 
 switchaccarrtab = function (tabparam) {
@@ -168,6 +183,7 @@ switchaccarrtab = function (tabparam) {
 			link.className = 'style-scope arrangementlink eds-tabs';
 		}
 	}
+	calculateHeightContainer();
 }
 
 gotoArr = function () {
@@ -179,6 +195,7 @@ gotoArr = function () {
 		}
 		showhideblocks('accountTab');
 		switchaccarrtab('arr');
+		calculateHeightContainer();
 	}
 }
 

@@ -51,7 +51,6 @@ $background_color_2: rgb(245, 245, 245);
 }
 .containerMiddle {
 	padding: 10px;
-	height: 870px;
 	padding-top: 15px;
 	flex: 0.95;
 	vertical-align: top;
@@ -82,7 +81,6 @@ $background_color_2: rgb(245, 245, 245);
 .containerFlex {
 	display: flex;
 	justify-content: space-between;
-	height: 1000px;
 }
 eds-accordion {
 	&:first-child {

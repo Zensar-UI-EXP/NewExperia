@@ -31,7 +31,8 @@
             </eds-dropdown>
         </div>
         <div>
-            <label class="form-switch">Expand all
+            <label class="form-switch">
+                Expand all
                 <input type="checkbox">
                 <i></i>
             </label>
@@ -41,12 +42,43 @@
 <pcc-eds-timeline-view class="eds" tabindex="-1" aria-hidden="true">
     <div class="timeline-wrapper style-scope pcc-eds-timeline-view user-call-flow">
         <div slot="timeline">
-            <pcc-eds-timeline-item icon="phone_callback" style="font-weight: bold;" class="eds">
+            <pcc-eds-timeline-item id="arrangementConfirmed" icon="phone_missed" style="font-weight: bold;" class="eds">
+                <div class="flex-container style-scope pcc-eds-timeline-item">
+                    <div class="section-left style-scope pcc-eds-timeline-item">
+                        <div slot="slot-left" style="text-align:right">
+                            <div class="timeline__day">Today</div>
+                            <div>15/05/2018</div>
+                        </div>
+                    </div>
+                    <div class="section-icon style-scope pcc-eds-timeline-item">
+                        <div class="icon-circle style-scope pcc-eds-timeline-item">
+                            <eds-icon class="s16 eds style-scope pcc-eds-timeline-item"
+                                icon="notifications_none" library="material-icon-font"><i
+                                    class="api-icon-element material-icons style-scope eds-icon"
+                                    style="transform: scale(1.35);">notifications_none</i></eds-icon>
+                        </div>
+                    </div>
+                    <div class="section-main flex-container style-scope pcc-eds-timeline-item">
+                        <div class="placeholder-center style-scope pcc-eds-timeline-item">
+                            <div slot="slot-header-center">
+                                <div slot="slot-header-left">Arrangement confirmed</div>
+                                <div slot="slot-header-right">
+                                    <eds-icon icon="account_circle" class="s16 eds" library="material-icon-font"><i
+                                            class="api-icon-element material-icons style-scope eds-icon eds-greyed"
+                                            style="transform: scale(1.35);">account_circle</i></eds-icon>
+                                        Agent 1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </pcc-eds-timeline-item>
+            <pcc-eds-timeline-item id="arrangementPending" icon="phone_callback" style="font-weight: bold;" class="eds">
                 <div class="flex-container style-scope pcc-eds-timeline-item">
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -71,7 +103,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -105,7 +137,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -138,7 +170,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -170,7 +202,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -195,7 +227,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -226,7 +258,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -255,7 +287,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">YESTERDAY</div>
-                            <div>21/04/2018</div>
+                            <div>14/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -317,7 +349,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">2 DAYS AGO</div>
-                            <div>20/04/2018</div>
+                            <div>13/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -349,7 +381,7 @@
                     <div class="section-left style-scope pcc-eds-timeline-item">
                         <div slot="slot-left" style="text-align:right">
                             <div class="timeline__day">2 DAYS AGO</div>
-                            <div>20/04/2018</div>
+                            <div>13/05/2018</div>
                         </div>
                     </div>
                     <div class="section-icon style-scope pcc-eds-timeline-item">
@@ -386,22 +418,32 @@
                         <div class="placeholder-center style-scope pcc-eds-timeline-item pagination__container">
                             <div slot="slot-header-left" class="pagination__links">
                                 <ul class="paginate">
-                                    <li class="paginate__item"><a class="paginate__link link--disabled"
+                                    <li class="paginate__item">
+                                        <a class="paginate__link link--disabled"
                                             href="javascript:void(0);" title="Previous Page">
                                             <eds-icon icon="keyboard_arrow_left" class="scale2 eds margin0 padding-left--0"
                                                 library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon margin0">keyboard_arrow_left</i></eds-icon>
-                                        </a></li>
-                                    <li class="paginate__item"><a class="paginate__link link--active"
-                                            href="javascript:void(0);" title="1">1</a></li>
-                                    <li class="paginate__item"><a class="paginate__link"
-                                            href="javascript:void(0);" title="2">2</a></li>
-                                    <li class="paginate__item"><a class="paginate__link"
-                                            href="javascript:void(0);" title="3">3</a></li>
-                                    <li class="paginate__item"><a class="paginate__link"
+                                        </a>
+                                    </li>
+                                    <li class="paginate__item">
+                                        <a class="paginate__link link--active"
+                                            href="javascript:void(0);" title="1">1</a>
+                                    </li>
+                                    <li class="paginate__item">
+                                        <a class="paginate__link"
+                                            href="javascript:void(0);" title="2">2</a>
+                                    </li>
+                                    <li class="paginate__item">
+                                        <a class="paginate__link"
+                                            href="javascript:void(0);" title="3">3</a>
+                                    </li>
+                                    <li class="paginate__item">
+                                        <a class="paginate__link"
                                             href="javascript:void(0);" title="Next Page">
                                             <eds-icon icon="keyboard_arrow_right" class="scale2 eds margin0 padding-right--0"
                                                 library="material-icon-font"><i class="api-icon-element material-icons style-scope eds-icon margin0">keyboard_arrow_right</i></eds-icon>
-                                        </a></a></li>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                             <div slot="slot-header-right" class="pagination__status">
